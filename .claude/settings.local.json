@@ -13,7 +13,8 @@
       "Bash(curl:*)",
       "WebFetch(domain:synapsis.id)",
       "Bash(py -m pip install:*)",
-      "Bash(py -c:*)"
+      "Bash(py -c:*)",
+      "Bash(head:*)"
     ]
   }
 }
