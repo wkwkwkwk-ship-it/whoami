@@ -693,15 +693,15 @@
           <form id="contact-form">
             <div class="field-group">
               <label for="fname" data-i18n="form.name.label">Name</label>
-              <input type="text" id="fname" data-i18n-placeholder="form.name.ph" placeholder="Your full name" required />
+              <input type="text" id="fname" name="name" data-i18n-placeholder="form.name.ph" placeholder="Your full name" required />
             </div>
             <div class="field-group">
               <label for="femail" data-i18n="form.email.label">Email</label>
-              <input type="email" id="femail" data-i18n-placeholder="form.email.ph" placeholder="your@email.com" required />
+              <input type="email" id="femail" name="email" data-i18n-placeholder="form.email.ph" placeholder="your@email.com" required />
             </div>
             <div class="field-group">
               <label for="fmessage" data-i18n="form.msg.label">Message</label>
-              <textarea id="fmessage" rows="5" data-i18n-placeholder="form.msg.ph" placeholder="What would you like to discuss?" required></textarea>
+              <textarea id="fmessage" name="message" rows="5" data-i18n-placeholder="form.msg.ph" placeholder="What would you like to discuss?" required></textarea>
             </div>
             <button type="submit" class="btn-submit">
               <span data-i18n="form.submit">Send Message</span>

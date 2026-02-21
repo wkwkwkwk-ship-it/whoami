@@ -494,7 +494,9 @@ input::placeholder, textarea::placeholder { color: var(--text-muted); }
 .btn-submit { display: flex; align-items: center; justify-content: space-between; width: 100%; background: var(--accent); color: #000; border: none; border-radius: var(--radius); padding: 12px 18px; font-size: 0.88rem; font-weight: 700; cursor: pointer; transition: opacity 0.2s; font-family: var(--font); }
 .btn-submit:hover { opacity: 0.87; }
 .btn-arrow { font-size: 1rem; }
-#form-msg { margin-top: 10px; font-size: 0.82rem; color: #4caf6e; text-align: center; min-height: 1.2em; }
+#form-msg { margin-top: 10px; font-size: 0.82rem; text-align: center; min-height: 1.2em; }
+#form-msg.form-msg-success { color: #4caf6e; }
+#form-msg.form-msg-error   { color: #e05a5a; }
 
 /* ── FOOTER ── */
 footer { background: var(--bg); border-top: 1px solid var(--border); padding: 32px 24px; }

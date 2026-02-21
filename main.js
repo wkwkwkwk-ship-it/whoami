@@ -165,6 +165,7 @@ const translations = {
     'form.submit':      'Send Message',
     'form.sending':     'Sending…',
     'form.sent':        'Message sent. I\'ll be in touch soon.',
+    'form.error':       'Something went wrong. Please try again or email me directly.',
 
     /* Nearon */
     'nearon.badge':            'Flagship Product',
@@ -354,6 +355,7 @@ const translations = {
     'form.submit':      'Kirim Pesan',
     'form.sending':     'Mengirim…',
     'form.sent':        'Pesan terkirim. Saya akan segera menghubungi Anda.',
+    'form.error':       'Ada kesalahan. Silakan coba lagi atau email saya langsung.',
 
     /* Nearon */
     'nearon.badge':            'Produk Unggulan',
@@ -526,20 +528,45 @@ skillFills.forEach(el => skillObs.observe(el));
 const form    = document.getElementById('contact-form');
 const formMsg = document.getElementById('form-msg');
 
-form.addEventListener('submit', e => {
+form.addEventListener('submit', async e => {
   e.preventDefault();
   const btn = form.querySelector('.btn-submit');
   const t   = translations[currentLang];
   btn.innerHTML = t['form.sending'] || 'Sending…';
   btn.disabled  = true;
+  formMsg.textContent = '';
+  formMsg.className   = '';
 
-  setTimeout(() => {
-    formMsg.textContent = t['form.sent'] || 'Message sent. I\'ll be in touch soon.';
-    form.reset();
-    btn.innerHTML = `<span>${t['form.submit'] || 'Send Message'}</span><span class="btn-arrow">→</span>`;
-    btn.disabled  = false;
-    setTimeout(() => { formMsg.textContent = ''; }, 5000);
-  }, 1100);
+  try {
+    const res = await fetch('https://formspree.io/f/mwvnrkkq', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        name:    form.querySelector('#fname').value,
+        email:   form.querySelector('#femail').value,
+        message: form.querySelector('#fmessage').value,
+      }),
+    });
+
+    if (res.ok) {
+      formMsg.textContent = t['form.sent'] || 'Message sent. I\'ll be in touch soon.';
+      formMsg.className   = 'form-msg-success';
+      form.reset();
+      setTimeout(() => { formMsg.textContent = ''; formMsg.className = ''; }, 6000);
+    } else {
+      const data = await res.json().catch(() => ({}));
+      const errText = (data.errors && data.errors.map(err => err.message).join(', ')) ||
+                      t['form.error'] || 'Something went wrong. Please try again.';
+      formMsg.textContent = errText;
+      formMsg.className   = 'form-msg-error';
+    }
+  } catch {
+    formMsg.textContent = t['form.error'] || 'Something went wrong. Please try again.';
+    formMsg.className   = 'form-msg-error';
+  }
+
+  btn.innerHTML = `<span>${t['form.submit'] || 'Send Message'}</span><span class="btn-arrow">→</span>`;
+  btn.disabled  = false;
 });
 
 /* ── HERO PARALLAX (desktop / hover-capable only) ── */
