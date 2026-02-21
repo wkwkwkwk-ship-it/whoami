@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Muhamad Randi Ritvaldi — Founder & CEO of Synapsis.Id, Indonesia's leading IoT solutions provider. Engineer, AI enthusiast, Microsoft Imagine Cup World Finalist, and international writer based in Jakarta." />
+  <meta name="theme-color" content="#0c0c0d" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#f5f4f1" media="(prefers-color-scheme: light)" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Muhamad Randi Ritvaldi — Founder, Synapsis.Id" />
+  <meta property="og:description" content="Founder & CEO of Synapsis.Id — Indonesia's leading IoT solutions provider. Engineer, AI enthusiast, and Microsoft Imagine Cup World Finalist." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Muhamad Randi Ritvaldi — Founder, Synapsis.Id" />
+  <meta name="twitter:description" content="Founder & CEO of Synapsis.Id — Indonesia's leading IoT solutions provider." />
+  <meta name="author" content="Muhamad Randi Ritvaldi" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="Muhamad Randi Ritvaldi, Synapsis, IoT Indonesia, Founder CEO, Beehive Drones, Imagine Cup, Jakarta entrepreneur" />
+  <title>Muhamad Randi Ritvaldi — Founder, Synapsis.Id</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Muhamad Randi Ritvaldi",
+    "givenName": "Muhamad Randi",
+    "familyName": "Ritvaldi",
+    "jobTitle": "Founder & CEO",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "PT Synapsis Sinergi Digital",
+      "url": "https://synapsis.id"
+    },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "University of Manchester" },
+      { "@type": "CollegeOrUniversity", "name": "Universitas Gadjah Mada" }
+    ],
+    "knowsAbout": ["Internet of Things", "Artificial Intelligence", "Entrepreneurship", "Embedded Systems", "Leadership"],
+    "address": { "@type": "PostalAddress", "addressLocality": "Jakarta", "addressCountry": "ID" },
+    "sameAs": [
+      "https://www.linkedin.com/in/randi-ritvaldi/",
+      "https://www.instagram.com/ritvaldi/",
+      "https://synapsis.id"
+    ],
+    "email": "ritvaldi@synapsis.id",
+    "description": "Founder & CEO of Synapsis.Id — Indonesia's leading IoT solutions provider. Engineer, AI enthusiast, and Microsoft Imagine Cup 2018 World Finalist."
+  }
+  </script>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <!-- ── NAV ── -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#hero">MRR</a>
+      <ul class="nav-links">
+        <li><a href="#about"      data-i18n="nav.about">About</a></li>
+        <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+        <li><a href="#synapsis"   data-i18n="nav.synapsis">Synapsis</a></li>
+        <li><a href="#skills"     data-i18n="nav.skills">Skills</a></li>
+        <li><a href="#education"  data-i18n="nav.education">Education</a></li>
+        <li><a href="#ai"         data-i18n="nav.ai">AI</a></li>
+        <li><a href="#leadership" data-i18n="nav.leadership">Leadership</a></li>
+        <li><a href="#beyond"     data-i18n="nav.beyond">Beyond Work</a></li>
+        <li><a href="#contact"    data-i18n="nav.contact" class="nav-cta">Contact</a></li>
+      </ul>
+      <div class="nav-controls">
+        <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <span class="lang-sep">/</span>
+          <button class="lang-btn" data-lang="id">ID</button>
+        </div>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── MOBILE NAV ── -->
+  <div class="nav-mobile" id="navMobile">
+    <a href="#about"      data-i18n="nav.about">About</a>
+    <a href="#experience" data-i18n="nav.experience">Experience</a>
+    <a href="#synapsis"   data-i18n="nav.synapsis">Synapsis</a>
+    <a href="#skills"     data-i18n="nav.skills">Skills</a>
+    <a href="#education"  data-i18n="nav.education">Education</a>
+    <a href="#ai"         data-i18n="nav.ai">AI</a>
+    <a href="#leadership" data-i18n="nav.leadership">Leadership</a>
+    <a href="#beyond"     data-i18n="nav.beyond">Beyond Work</a>
+    <a href="#contact"    data-i18n="nav.contact">Contact</a>
+  </div>
+
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <p class="hero-eyebrow reveal">Muhamad Randi Ritvaldi</p>
+        <h1 class="hero-headline reveal" data-i18n-html="hero.headline">
+          Founder.<br /><em>Engineer.</em><br />AI-Powered.
+        </h1>
+        <p class="hero-desc reveal" data-i18n-html="hero.desc">
+          I founded <strong>Synapsis.Id</strong> — Indonesia's leading IoT solutions provider. Today I'm harnessing the power of AI to build smarter products, sharper teams, and a more intelligent future for technology companies.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#experience" class="btn-primary" data-i18n="hero.btn.journey">My Journey</a>
+          <a href="#contact"    class="btn-ghost"   data-i18n="hero.btn.contact">Get In Touch</a>
+        </div>
+      </div>
+      <div class="hero-right reveal">
+        <div class="hero-card">
+          <img
+            src="images/profile-1.png"
+            alt="Muhamad Randi Ritvaldi — Founder & CEO, Synapsis.Id"
+            class="hero-photo"
+          />
+          <div class="hero-meta">
+            <div class="meta-item">
+              <span class="meta-label" data-i18n="meta.role.label">Role</span>
+              <span class="meta-value" data-i18n="meta.role.value">Founder & CEO — Synapsis.Id</span>
+            </div>
+            <div class="meta-divider"></div>
+            <div class="meta-item">
+              <span class="meta-label" data-i18n="meta.focus.label">Focus</span>
+              <span class="meta-value" data-i18n="meta.focus.value">AI · IoT · Leadership</span>
+            </div>
+            <div class="meta-divider"></div>
+            <div class="meta-item">
+              <span class="meta-label" data-i18n="meta.edu.label">Education</span>
+              <span class="meta-value">MSc Manchester · S1 UGM</span>
+            </div>
+            <div class="meta-divider"></div>
+            <div class="meta-item">
+              <span class="meta-label" data-i18n="meta.base.label">Based In</span>
+              <span class="meta-value">Jakarta, Indonesia</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-line"></div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-label reveal">
+          <span class="section-num">01</span>
+          <span class="section-title-sm" data-i18n="nav.about">About</span>
+        </div>
+        <div class="about-content">
+          <h2 class="reveal" data-i18n-html="about.headline">
+            Building companies, leading teams, and <em>thinking with AI.</em>
+          </h2>
+          <div class="about-body reveal">
+            <p data-i18n-html="about.p1">An IoT engineer-turned-founder based in Jakarta, Indonesia. I hold a <strong>Bachelor's in Electrical Engineering (Control Systems) from Universitas Gadjah Mada</strong> and a <strong>Master of Science in Communication Engineering from the University of Manchester</strong>.</p>
+            <p data-i18n-html="about.p2">I am the <strong>Founder of Synapsis.Id</strong>, which I built from the hardware bench — writing firmware, wiring sensors, designing IoT devices — before scaling it into one of Indonesia's most recognised IoT solution providers. My expertise spans the full stack: embedded hardware, cloud connectivity, and end-to-end IoT framework architecture from physical measurement to user interface.</p>
+            <p data-i18n-html="about.p3">Today, I'm applying the lens of <strong>Artificial Intelligence</strong> to how I build, manage, and lead. I also write, speak, and engage on management, leadership, and entrepreneurship, drawing from over six years of building and running a tech company from scratch.</p>
+          </div>
+          <div class="about-pillars reveal">
+            <div class="pillar"><span class="pillar-icon">◈</span><span data-i18n="pillar.1">Founder Mindset</span></div>
+            <div class="pillar"><span class="pillar-icon">◈</span><span data-i18n="pillar.2">IoT Architecture</span></div>
+            <div class="pillar"><span class="pillar-icon">◈</span><span data-i18n="pillar.3">AI-Powered Building</span></div>
+            <div class="pillar"><span class="pillar-icon">◈</span><span data-i18n="pillar.4">People Leadership</span></div>
+            <div class="pillar"><span class="pillar-icon">◈</span><span data-i18n="pillar.5">Continuous Learning</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EXPERIENCE ── -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-num">02</span>
+        <h2 class="section-heading" data-i18n="nav.experience">Experience</h2>
+      </div>
+      <div class="exp-list">
+
+        <div class="exp-item reveal">
+          <div class="exp-meta">
+            <span class="exp-period">Jan 2020 — <span data-i18n="exp.present">Present</span></span>
+            <span class="exp-tag" data-i18n="exp.tag.founder">Founder</span>
+          </div>
+          <div class="exp-body">
+            <h3 data-i18n="exp.syn.ceo.title">Founder & Chief Executive Officer</h3>
+            <p class="exp-company">Synapsis.Id (PT Synapsis Sinergi Digital) · Jakarta, Indonesia</p>
+            <p class="exp-desc" data-i18n-html="exp.syn.ceo.desc">Founded Synapsis.Id and have led it as CEO since January 2020 — growing it from an early-stage IoT hardware venture into Indonesia's leading IoT solutions provider.</p>
+            <ul class="exp-bullets" data-i18n-html="exp.syn.ceo.bullets">
+              <li>Built the company from the ground up — from hardware design to a full-service digital transformation provider</li>
+              <li>Defined product strategy, technology roadmap, and go-to-market positioning</li>
+              <li>Built and led cross-functional teams across hardware, software, and business development</li>
+              <li>Established Synapsis as the leading IoT provider in Indonesia</li>
+              <li>Currently integrating AI capabilities into the company's product and operations strategy</li>
+            </ul>
+            <div class="exp-skills">
+              <span data-i18n="tag.founding">Company Founding</span><span>IoT Strategy</span><span>P&amp;L Ownership</span><span data-i18n="tag.team">Team Building</span><span>AI Integration</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-item reveal">
+          <div class="exp-meta">
+            <span class="exp-period">May 2019 — Jan 2020</span>
+            <span class="exp-sub">9 <span data-i18n="exp.months">months</span></span>
+          </div>
+          <div class="exp-body">
+            <h3 data-i18n="exp.syn.hw.title">Hardware Engineer</h3>
+            <p class="exp-company">Synapsis.Id · Greater Jakarta Area, Indonesia</p>
+            <p class="exp-desc" data-i18n-html="exp.syn.hw.desc">The founding engineer at Synapsis — hands-on with every layer of the IoT stack before transitioning to the CEO role. This ground-level technical experience directly informs how I lead engineering direction today.</p>
+            <ul class="exp-bullets" data-i18n-html="exp.syn.hw.bullets">
+              <li>Designed and built IoT hardware modules for sensor data acquisition and cloud transmission</li>
+              <li>Developed full-scale IoT frameworks from physical measurement to user interface</li>
+              <li>Programmed embedded systems in C, C++, and Python</li>
+            </ul>
+            <div class="exp-skills">
+              <span>C / C++</span><span>Python</span><span>Embedded Systems</span><span>IoT Hardware</span><span>Sensor Integration</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-item reveal">
+          <div class="exp-meta">
+            <span class="exp-period">Apr 2017 — Apr 2019</span>
+            <span class="exp-sub">2 <span data-i18n="exp.years">years</span> 1 <span data-i18n="exp.months">month</span></span>
+          </div>
+          <div class="exp-body">
+            <h3 data-i18n="exp.beehive.title">Co-Founder</h3>
+            <p class="exp-company">Beehive Drones · Manchester, United Kingdom</p>
+            <p class="exp-desc" data-i18n-html="exp.beehive.desc">Co-founded Beehive Drones during my MSc at the University of Manchester — an IoT-based swarm drone platform for precision agriculture, designed to address global food security through cooperative UAV systems accessible via mobile app.</p>
+            <ul class="exp-bullets" data-i18n-html="exp.beehive.bullets">
+              <li><strong>Microsoft Imagine Cup 2018 — Indonesia National Winner</strong> — selected from 5 national finalists, winning 10,000,000 IDR</li>
+              <li><strong>Asia Pacific Finalist</strong> — represented Indonesia at APAC Finals, Kuala Lumpur (April 2018), competing against 15 teams from 8 countries</li>
+              <li><strong>World Finals, Redmond WA</strong> — one of 49 teams from 33 countries at the 16th Imagine Cup World Finals at Microsoft HQ</li>
+              <li>Won Research Category at <strong>Venture Out 2017</strong>, University of Manchester</li>
+              <li>Grew into a multi-sector UAV provider: agriculture, forestry, mining, construction</li>
+            </ul>
+            <div class="exp-skills">
+              <span data-i18n="tag.cofounding">Co-Founding</span><span>UAV Systems</span><span>IoT Integration</span><span>Imagine Cup World Finalist</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-item reveal">
+          <div class="exp-meta">
+            <span class="exp-period">Sep 2015 — Oct 2015</span>
+            <span class="exp-sub">2 <span data-i18n="exp.months">months</span></span>
+          </div>
+          <div class="exp-body">
+            <h3 data-i18n="exp.psn.title">Engineering Intern</h3>
+            <p class="exp-company">Pasifik Satelit Nusantara (PSN) · Cikarang, West Java, Indonesia</p>
+            <p class="exp-desc" data-i18n-html="exp.psn.desc">Contributed to satellite communications infrastructure at PSN's Ground Segment Department, working on systems that connect Indonesia's remote regions.</p>
+            <ul class="exp-bullets" data-i18n-html="exp.psn.bullets">
+              <li>Worked on NOAA-19 satellite ground segment infrastructure</li>
+              <li>Encoded and processed Automatic Picture Transmission (APT) signals</li>
+            </ul>
+            <div class="exp-skills">
+              <span>Satellite Comms</span><span>NOAA-19</span><span>APT Signal Processing</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SYNAPSIS ── -->
+  <section id="synapsis">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-num">03</span>
+        <h2 class="section-heading">Synapsis.Id</h2>
+      </div>
+      <div class="syn-intro reveal">
+        <div class="syn-intro-text">
+          <img src="images/synapsis-logo.png" alt="Synapsis.Id" class="syn-logo" />
+          <p data-i18n-html="syn.desc1">PT Synapsis Sinergi Digital is Indonesia's leading end-to-end IoT solutions provider, founded in 2019 and headquartered in East Jakarta. We support partners across industries in solving operational challenges with advanced, reliable Internet of Things technology — from requirements analysis and hardware design, to prototyping, manufacturing, and full installation.</p>
+          <p data-i18n-html="syn.desc2">Our flagship product, <strong>Nearon</strong>, is a locally-manufactured IoT gateway and node platform that consolidates data from multiple sensors into a single real-time dashboard — with instant alerts via Email, WhatsApp, and Telegram. Nearon is TKDN-certified, supporting Indonesia's national industrial development agenda.</p>
+          <a href="https://synapsis.id" target="_blank" rel="noopener noreferrer" class="syn-cta" data-i18n="syn.cta">Visit synapsis.id →</a>
+        </div>
+        <div class="syn-stats">
+          <div class="syn-stat">
+            <span class="syn-stat-num">2019</span>
+            <span class="syn-stat-label" data-i18n="syn.stat.founded">Founded</span>
+          </div>
+          <div class="syn-stat">
+            <span class="syn-stat-num">51–100</span>
+            <span class="syn-stat-label" data-i18n="syn.stat.employees">Employees</span>
+          </div>
+          <div class="syn-stat">
+            <span class="syn-stat-num">10+</span>
+            <span class="syn-stat-label" data-i18n="syn.stat.industries">Industries</span>
+          </div>
+          <div class="syn-stat">
+            <span class="syn-stat-num">2</span>
+            <span class="syn-stat-label" data-i18n="syn.stat.offices">Offices</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nearon Showcase -->
+      <div class="nearon-showcase">
+
+        <div class="nearon-platform reveal">
+          <div class="nearon-platform-top">
+            <div class="nearon-platform-text">
+              <div class="nearon-badge" data-i18n="nearon.badge">Flagship Product</div>
+              <h3 class="nearon-name">Nearon IoT Platform</h3>
+              <p class="nearon-desc" data-i18n="nearon.desc">The technological core that connects all Synapsis solutions — integrating sensors, gateways, and dashboards into one unified system that captures real-time data. Modular, scalable, and built for Indonesian industry.</p>
+            </div>
+            <div class="nearon-tags">
+              <span class="nearon-tag" data-i18n="nearon.tag1">⚡ Real-time Data</span>
+              <span class="nearon-tag" data-i18n="nearon.tag2">🔗 Open API</span>
+              <span class="nearon-tag" data-i18n="nearon.tag3">📡 Scalable</span>
+              <span class="nearon-tag" data-i18n="nearon.tag4">🇮🇩 TKDN Certified</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <p class="block-title nearon-solutions-label" data-i18n="nearon.solutions.label">Solutions Powered by Nearon IoT</p>
+          <div class="nearon-grid">
+            <div class="nearon-card">
+              <span class="nearon-card-icon">🚘</span>
+              <span class="nearon-card-title" data-i18n="nearon.dms.title">Driver Monitoring System</span>
+              <span class="nearon-card-desc" data-i18n="nearon.dms.desc">Detects driver fatigue and tracks operator behaviour in real time to prevent accidents and maintain route compliance.</span>
+            </div>
+            <div class="nearon-card">
+              <span class="nearon-card-icon">🦺</span>
+              <span class="nearon-card-title" data-i18n="nearon.ppe.title">PPE Detection</span>
+              <span class="nearon-card-desc" data-i18n="nearon.ppe.desc">AI-powered identification of helmets, vests, and gloves across work sites — with instant alerts and visual documentation.</span>
+            </div>
+            <div class="nearon-card">
+              <span class="nearon-card-icon">📍</span>
+              <span class="nearon-card-title" data-i18n="nearon.gps.title">NearFind — GPS Tracking</span>
+              <span class="nearon-card-desc" data-i18n="nearon.gps.desc">Enterprise-grade asset tracking for industrial and logistics operations — full visibility over critical assets, anywhere.</span>
+            </div>
+            <div class="nearon-card">
+              <span class="nearon-card-icon">👥</span>
+              <span class="nearon-card-title" data-i18n="nearon.people.title">People Counting</span>
+              <span class="nearon-card-desc" data-i18n="nearon.people.desc">AI-driven occupancy tracking via CCTV to optimise energy usage and improve building space utilisation.</span>
+            </div>
+            <div class="nearon-card">
+              <span class="nearon-card-icon">🎯</span>
+              <span class="nearon-card-title" data-i18n="nearon.face.title">Face Recognition</span>
+              <span class="nearon-card-desc" data-i18n="nearon.face.desc">Real-time facial identification through CCTV integration for facility security and unauthorised access prevention.</span>
+            </div>
+            <div class="nearon-card">
+              <span class="nearon-card-icon">🖥️</span>
+              <span class="nearon-card-title" data-i18n="nearon.dcm.title">Data Center Monitoring</span>
+              <span class="nearon-card-desc" data-i18n="nearon.dcm.desc">Environmental monitoring for reliable, real-time oversight of data center conditions and infrastructure health.</span>
+            </div>
+            <div class="nearon-card">
+              <span class="nearon-card-icon">☀️</span>
+              <span class="nearon-card-title" data-i18n="nearon.solar.title">Nearon Solar Mast</span>
+              <span class="nearon-card-desc" data-i18n="nearon.solar.desc">Solar-powered portable surveillance platform built for mining sites and remote operations with no grid dependency.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SKILLS & AWARDS ── -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-num">04</span>
+        <h2 class="section-heading" data-i18n="section.skills">Skills &amp; Recognition</h2>
+      </div>
+      <div class="skills-awards-grid">
+        <div class="skills-block reveal">
+          <h3 class="block-title" data-i18n="skills.tech.title">Technical Skills</h3>
+          <div class="skills-list">
+            <div class="skill-item"><span class="skill-name">C / C++</span><span class="skill-bar"><span class="skill-fill" style="width:90%"></span></span></div>
+            <div class="skill-item"><span class="skill-name">Python</span><span class="skill-bar"><span class="skill-fill" style="width:85%"></span></span></div>
+            <div class="skill-item"><span class="skill-name" data-i18n="skill.iot">IoT System Architecture</span><span class="skill-bar"><span class="skill-fill" style="width:95%"></span></span></div>
+            <div class="skill-item"><span class="skill-name" data-i18n="skill.hw">Embedded Hardware Design</span><span class="skill-bar"><span class="skill-fill" style="width:88%"></span></span></div>
+            <div class="skill-item"><span class="skill-name" data-i18n="skill.ai">AI Tools &amp; LLM Applications</span><span class="skill-bar"><span class="skill-fill" style="width:78%"></span></span></div>
+            <div class="skill-item"><span class="skill-name" data-i18n="skill.plc">PLC &amp; SCADA Systems</span><span class="skill-bar"><span class="skill-fill" style="width:75%"></span></span></div>
+          </div>
+          <h3 class="block-title" style="margin-top:32px" data-i18n="skills.lang.title">Languages</h3>
+          <div class="lang-list">
+            <div class="lang-item"><span class="lang-name">Indonesian</span><span class="lang-level" data-i18n="lang.native">Native</span></div>
+            <div class="lang-item"><span class="lang-name">English</span><span class="lang-level" data-i18n="lang.professional">Professional</span></div>
+            <div class="lang-item"><span class="lang-name">Japanese</span><span class="lang-level" data-i18n="lang.elementary">Elementary</span></div>
+          </div>
+          <h3 class="block-title" style="margin-top:32px" data-i18n="skills.cert.title">Certification</h3>
+          <div class="cert-item"><span class="cert-dot"></span><span data-i18n="cert.plc">PLC (Programmable Logic Controller) &amp; SCADA Training</span></div>
+        </div>
+        <div class="awards-block reveal">
+          <h3 class="block-title" data-i18n="awards.title">Honours &amp; Awards</h3>
+          <div class="awards-list">
+            <div class="award-item award-featured">
+              <div class="award-medal gold">🌍</div>
+              <div class="award-text">
+                <span class="award-title" data-i18n="award.imagine.title">Microsoft Imagine Cup 2018 — World Finalist</span>
+                <span class="award-sub" data-i18n-html="award.imagine.sub">Indonesia National Winner → APAC Finalist (KL) → World Finals, Redmond WA<br/>49 teams · 33 countries · Microsoft HQ</span>
+              </div>
+            </div>
+            <div class="award-item">
+              <div class="award-medal gold">1st</div>
+              <div class="award-text">
+                <span class="award-title" data-i18n="award.rocket1.title">1st Winner — National Rocket Competition</span>
+                <span class="award-sub" data-i18n="award.rocket.sub">Rocket Payload Category (Team)</span>
+              </div>
+            </div>
+            <div class="award-item">
+              <div class="award-medal silver">2nd</div>
+              <div class="award-text">
+                <span class="award-title" data-i18n="award.rocket2.title">2nd Winner — National Rocket Competition</span>
+                <span class="award-sub" data-i18n="award.rocket.sub">Rocket Payload Category (Team)</span>
+              </div>
+            </div>
+            <div class="award-item">
+              <div class="award-medal bronze">🥉</div>
+              <div class="award-text">
+                <span class="award-title" data-i18n="award.bronze.title">Bronze Medal — National Science Week XVIII</span>
+                <span class="award-sub" data-i18n="award.bronze.sub">Entrepreneurship Category (Team)</span>
+              </div>
+            </div>
+            <div class="award-item">
+              <div class="award-medal special">🇯🇵</div>
+              <div class="award-text">
+                <span class="award-title" data-i18n="award.japan.title">Japan-Asia Youth Research Exchange Program</span>
+                <span class="award-sub" data-i18n="award.japan.sub">Awardee in Science · Shizuoka University, Japan</span>
+              </div>
+            </div>
+            <div class="award-item">
+              <div class="award-medal special">🏆</div>
+              <div class="award-text">
+                <span class="award-title" data-i18n="award.venture.title">Venture Out 2017 — Research Category Winner</span>
+                <span class="award-sub">University of Manchester · Beehive Drones</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EDUCATION ── -->
+  <section id="education">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-num">05</span>
+        <h2 class="section-heading" data-i18n="nav.education">Education</h2>
+      </div>
+      <div class="edu-timeline">
+
+        <div class="edu-card reveal">
+          <div class="edu-top">
+            <div class="edu-school-initial">UoM</div>
+            <div>
+              <h3>University of Manchester</h3>
+              <p class="edu-faculty" data-i18n="edu.uom.degree">Master of Science — Communication Engineering</p>
+              <p class="edu-period">2017 – 2018 · Manchester, United Kingdom</p>
+            </div>
+          </div>
+          <p class="edu-note" data-i18n-html="edu.uom.desc">Postgraduate research in communication engineering. During this period, co-founded Beehive Drones — winning the Indonesia national Imagine Cup, advancing to APAC Finals, and representing Indonesia at the World Finals in Redmond, Washington.</p>
+          <div class="edu-achievement"><span class="ach-dot"></span><span data-i18n="edu.uom.ach">Microsoft Imagine Cup 2018 — Indonesia Winner → APAC Finalist → World Finals (Redmond)</span></div>
+        </div>
+
+        <div class="edu-card reveal">
+          <div class="edu-top">
+            <div class="edu-school-initial">UGM</div>
+            <div>
+              <h3>Universitas Gadjah Mada</h3>
+              <p class="edu-faculty" data-i18n="edu.ugm.degree">Bachelor's Degree — Electrical Engineering, Control Systems</p>
+              <p class="edu-period">2012 – 2016 · Yogyakarta, Indonesia</p>
+            </div>
+          </div>
+          <p class="edu-note" data-i18n-html="edu.ugm.desc">Majored in Control System Engineering at one of Indonesia's premier engineering faculties. Competed in multiple national science and technology competitions throughout undergraduate years.</p>
+          <div class="edu-achievement"><span class="ach-dot"></span><span data-i18n-html="edu.ugm.ach">Invited Speaker — Studio Generale JTETI UGM, March 2025 · <em>"Membangun Jiwa Kepemimpinan untuk Sukses Berwirausaha"</em></span></div>
+        </div>
+
+        <div class="edu-card reveal">
+          <div class="edu-top">
+            <div class="edu-school-initial">SMA</div>
+            <div>
+              <h3>SMA Negeri 48 Jakarta</h3>
+              <p class="edu-faculty" data-i18n="edu.sma.degree">High School — Science</p>
+              <p class="edu-period">2009 – 2012 · Jakarta, Indonesia</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── AI-POWERED ── -->
+  <section id="ai">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-label reveal">
+          <span class="section-num">06</span>
+          <span class="section-title-sm" data-i18n="nav.ai">AI</span>
+        </div>
+        <div class="about-content">
+          <h2 class="reveal" data-i18n-html="ai.headline">
+            Using AI as leverage — to build faster, decide sharper, <em>and lead better.</em>
+          </h2>
+          <div class="about-body reveal">
+            <p data-i18n-html="ai.p1">Coming from a background of making machines communicate through IoT, I see <strong>Artificial Intelligence</strong> as the next frontier: making those systems not just transmit data, but <strong>reason, predict, and act</strong>. The convergence of IoT infrastructure with intelligent AI agents is what I believe will define the next wave of industrial technology in Indonesia and beyond.</p>
+            <p data-i18n-html="ai.p2">But my AI interest goes beyond the technical. I'm actively exploring how <strong>AI reshapes leadership and management</strong> — from AI-augmented decision-making and automated workflows, to how founders can use LLMs as a thinking partner to move faster and scale more intelligently.</p>
+          </div>
+          <div class="ai-cards reveal">
+            <div class="ai-card">
+              <span class="ai-card-icon">🤖</span>
+              <div>
+                <span class="ai-card-title" data-i18n="ai.card1.title">LLMs &amp; Agentic AI</span>
+                <span class="ai-card-sub" data-i18n="ai.card1.desc">Exploring how language models automate complex workflows and act as intelligent business agents</span>
+              </div>
+            </div>
+            <div class="ai-card">
+              <span class="ai-card-icon">🔗</span>
+              <div>
+                <span class="ai-card-title" data-i18n="ai.card2.title">AI × IoT Convergence</span>
+                <span class="ai-card-sub" data-i18n="ai.card2.desc">Integrating AI decision layers on top of IoT sensor infrastructure to build truly autonomous systems</span>
+              </div>
+            </div>
+            <div class="ai-card">
+              <span class="ai-card-icon">⚡</span>
+              <div>
+                <span class="ai-card-title" data-i18n="ai.card3.title">AI-Powered Operations</span>
+                <span class="ai-card-sub" data-i18n="ai.card3.desc">Using AI tools to make teams, products, and company decisions faster and more data-driven</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── LEADERSHIP ── -->
+  <section id="leadership">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-label reveal">
+          <span class="section-num">07</span>
+          <span class="section-title-sm" data-i18n="nav.leadership">Leadership</span>
+        </div>
+        <div class="about-content">
+          <h2 class="reveal" data-i18n-html="lead.headline">
+            Leadership isn't a title — <em>it's a practice.</em>
+          </h2>
+          <div class="about-body reveal">
+            <p data-i18n-html="lead.p1">Over six years of building Synapsis from scratch, I've learned that <strong>technology solves problems, but people build companies.</strong> The hardest and most important part of founding a company isn't the product — it's creating a team with shared vision, the resilience to push through uncertainty, and the culture to keep improving.</p>
+            <p data-i18n-html="lead.p2">I write and speak about the management and leadership lessons I've gathered as a founder: from navigating the chaos of early-stage startups to building structured teams as a company scales. My framework is grounded in five pillars that I believe define effective entrepreneurial leaders.</p>
+          </div>
+          <div class="leadership-pillars reveal">
+            <div class="lp-card"><span class="lp-num">01</span><span class="lp-title" data-i18n="lp.1.title">Visionary Thinking</span><span class="lp-desc" data-i18n="lp.1.desc">Recognising market opportunities and adapting ahead of technological change</span></div>
+            <div class="lp-card"><span class="lp-num">02</span><span class="lp-title" data-i18n="lp.2.title">Risk Management</span><span class="lp-desc" data-i18n="lp.2.desc">Making strategic decisions under uncertainty without being paralysed by it</span></div>
+            <div class="lp-card"><span class="lp-num">03</span><span class="lp-title" data-i18n="lp.3.title">Innovation Mindset</span><span class="lp-desc" data-i18n="lp.3.desc">Thinking unconventionally to find solutions others don't see</span></div>
+            <div class="lp-card"><span class="lp-num">04</span><span class="lp-title" data-i18n="lp.4.title">Resource Management</span><span class="lp-desc" data-i18n="lp.4.desc">Getting the most from people, capital, and time — especially when all three are scarce</span></div>
+            <div class="lp-card"><span class="lp-num">05</span><span class="lp-title" data-i18n="lp.5.title">Resilience</span><span class="lp-desc" data-i18n="lp.5.desc">The mental toughness to keep building when things don't go as planned</span></div>
+          </div>
+
+          <!-- Speaker Highlight -->
+          <div class="speaker-highlight reveal">
+            <div class="sh-photos">
+              <img src="images/ugm-01.jpg" alt="Randi Ritvaldi speaking at UGM Studio Generale 2025" class="sh-photo-main" loading="lazy" />
+              <div class="sh-photo-thumbs">
+                <img src="images/ugm-02.jpg" alt="Studio Generale JTETI UGM 2025" loading="lazy" />
+                <img src="images/ugm-03.jpg" alt="Studio Generale JTETI UGM 2025" loading="lazy" />
+              </div>
+            </div>
+            <div class="sh-content">
+              <div class="sh-meta">
+                <span class="sh-badge" data-i18n="sh.badge">Speaker</span>
+                <span class="sh-date" data-i18n="sh.date">13 March 2025 · Yogyakarta</span>
+              </div>
+              <h4 class="sh-title">"Membangun Jiwa Kepemimpinan untuk Sukses Berwirausaha"</h4>
+              <p class="sh-venue" data-i18n="sh.venue">Studio Generale — Dept. of Electrical Engineering &amp; Information Technology, Universitas Gadjah Mada</p>
+              <blockquote class="sh-quote">
+                "Bangun jaringan, terus belajar, dan miliki pola pikir pertumbuhan — tiga hal yang akan membawa Anda lebih jauh dari sekadar gelar atau skill teknis."
+                <cite>— Muhamad Randi Ritvaldi</cite>
+              </blockquote>
+              <a href="https://jteti.ugm.ac.id/2025/03/13/membangun-jiwa-kepemimpinan-untuk-sukses-berwirausaha/" target="_blank" rel="noopener noreferrer" class="sh-link" data-i18n="sh.link">Read full article →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BEYOND WORK ── -->
+  <section id="beyond">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-num">08</span>
+        <h2 class="section-heading" data-i18n="nav.beyond">Beyond Work</h2>
+      </div>
+
+      <div class="golf-card reveal">
+        <div class="golf-left">
+          <div class="golf-eyebrow">
+            <span class="golf-icon">⛳</span>
+            <span class="golf-label" data-i18n="golf.label">Golf Enthusiast &amp; Brand Ambassador</span>
+          </div>
+          <h3 data-i18n="golf.title">Break 80 Challenge</h3>
+          <p class="golf-challenge" data-i18n-html="golf.challenge">12 courses · 12 months · with <strong>@asiagolfindonesia</strong></p>
+          <p class="golf-desc" data-i18n="golf.desc">Documenting the pursuit of breaking 80 across 12 different courses in Indonesia over 12 months. For me, golf is more than a sport — it's a space for meaningful conversations, strategic thinking, and building the kind of relationships that matter.</p>
+          <a href="https://www.instagram.com/golfforwork/" target="_blank" rel="noopener noreferrer" class="golf-ig-link">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5"/><path fill="var(--bg-card)" d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="var(--bg-card)" stroke-width="2"/></svg>
+            @golfforwork
+          </a>
+        </div>
+        <div class="golf-right">
+          <p class="brands-label" data-i18n="brands.label">Brand Ambassador</p>
+          <div class="brands-list">
+            <div class="brand-tag"><span class="brand-dot"></span>Tour Edge Golf</div>
+            <div class="brand-tag"><span class="brand-dot"></span>Indi Golf</div>
+            <div class="brand-tag"><span class="brand-dot"></span>Bettinardi Golf</div>
+            <div class="brand-tag"><span class="brand-dot"></span>Vice Golf</div>
+            <div class="brand-tag"><span class="brand-dot"></span>Greg Norman Collection</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="beyond-row">
+        <div class="writing-card reveal">
+          <div class="writing-card-header">
+            <div class="writing-card-icon">✍️</div>
+            <span class="writing-card-label" data-i18n="writing.label">International Publications</span>
+          </div>
+          <p class="writing-card-desc" data-i18n="writing.desc">As an independent analyst on Indonesian politics and society, I contribute to international publications — bringing an on-the-ground perspective on Indonesian elections, Islamic political dynamics, and governance.</p>
+          <div class="writing-card-articles">
+            <a href="https://thediplomat.com/2018/08/indonesias-presidential-elections-could-set-jakarta-back/" target="_blank" rel="noopener noreferrer" class="wc-article">
+              <div class="wc-pub">The Diplomat <span>· Aug 2018</span></div>
+              <div class="wc-title" data-i18n="article1.title">Indonesia's Presidential Elections Could Set Jakarta Back</div>
+            </a>
+            <a href="https://asaa.asn.au/muslims-versus-muslims-in-the-2019-indonesian-presidential-election/" target="_blank" rel="noopener noreferrer" class="wc-article">
+              <div class="wc-pub">ASAA <span>· Mar 2019</span></div>
+              <div class="wc-title" data-i18n="article2.title">Muslims versus Muslims in the 2019 Indonesian Presidential Election</div>
+            </a>
+          </div>
+        </div>
+        <div class="beyond-card reveal">
+          <div class="beyond-icon">🎤</div>
+          <h3 data-i18n="speaker.title">Speaker &amp; Mentor</h3>
+          <p data-i18n-html="speaker.desc">Invited guest speaker at Universitas Gadjah Mada's Studio Generale (JTETI Department, March 2025), sharing lessons from building Synapsis with the next generation of engineers — on vision, resilience, risk, and what it actually takes to become an entrepreneurial leader.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-wrap">
+        <div class="contact-left reveal">
+          <span class="section-num">09</span>
+          <h2 data-i18n="contact.headline">Let's Connect</h2>
+          <p data-i18n="contact.desc">Whether you're exploring IoT or AI solutions, looking for a collaboration, want to talk leadership, or just need a golf partner in Jakarta — reach out.</p>
+          <div class="contact-links">
+            <a href="mailto:ritvaldi@synapsis.id" class="contact-link">
+              <span class="link-label" data-i18n="contact.email">Email</span>
+              <span class="link-val">ritvaldi@synapsis.id</span>
+            </a>
+            <a href="https://www.linkedin.com/in/randi-ritvaldi/" target="_blank" rel="noopener noreferrer" class="contact-link">
+              <span class="link-label">LinkedIn</span>
+              <span class="link-val">linkedin.com/in/randi-ritvaldi</span>
+            </a>
+            <div class="contact-link contact-ig-row">
+              <span class="link-label">Instagram</span>
+              <span class="link-val contact-ig-wrap">
+                <a href="https://www.instagram.com/ritvaldi/" target="_blank" rel="noopener noreferrer" class="contact-ig-handle">@ritvaldi</a>
+                <span class="contact-ig-sep">&amp;</span>
+                <a href="https://www.instagram.com/golfforwork/" target="_blank" rel="noopener noreferrer" class="contact-ig-handle">@golfforwork</a>
+              </span>
+            </div>
+            <a href="https://synapsis.id" target="_blank" rel="noopener noreferrer" class="contact-link">
+              <span class="link-label" data-i18n="contact.company">Company</span>
+              <span class="link-val">synapsis.id</span>
+            </a>
+          </div>
+        </div>
+        <div class="contact-right reveal">
+          <form id="contact-form">
+            <div class="field-group">
+              <label for="fname" data-i18n="form.name.label">Name</label>
+              <input type="text" id="fname" data-i18n-placeholder="form.name.ph" placeholder="Your full name" required />
+            </div>
+            <div class="field-group">
+              <label for="femail" data-i18n="form.email.label">Email</label>
+              <input type="email" id="femail" data-i18n-placeholder="form.email.ph" placeholder="your@email.com" required />
+            </div>
+            <div class="field-group">
+              <label for="fmessage" data-i18n="form.msg.label">Message</label>
+              <textarea id="fmessage" rows="5" data-i18n-placeholder="form.msg.ph" placeholder="What would you like to discuss?" required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">
+              <span data-i18n="form.submit">Send Message</span>
+              <span class="btn-arrow">→</span>
+            </button>
+            <p id="form-msg"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="container footer-inner">
+      <p class="footer-name">Muhamad Randi Ritvaldi</p>
+      <p class="footer-copy" data-i18n="footer.copy">© 2025. Founder &amp; CEO, Synapsis.Id.</p>
+      <div class="footer-nav">
+        <a href="https://www.linkedin.com/in/randi-ritvaldi/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://synapsis.id" target="_blank" rel="noopener noreferrer">Synapsis.Id</a>
+        <a href="https://beehivedrones.com/" target="_blank" rel="noopener noreferrer">Beehive Drones</a>
+        <a href="#hero" data-i18n="footer.top">↑ Top</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

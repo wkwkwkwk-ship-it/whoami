@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Background: dark rounded square -->
+  <rect width="32" height="32" rx="7" fill="#0c0c0d"/>
+  <!-- Subtle gold border -->
+  <rect width="32" height="32" rx="7" fill="none" stroke="#c9a96e" stroke-width="1.5" opacity="0.35"/>
+  <!-- Letter R in gold serif -->
+  <text
+    x="16" y="25"
+    text-anchor="middle"
+    font-family="Georgia, 'Palatino Linotype', serif"
+    font-size="23"
+    font-weight="700"
+    fill="#c9a96e"
+  >R</text>
+</svg>

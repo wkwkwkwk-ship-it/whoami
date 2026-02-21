@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:snap.careers)",
+      "WebFetch(domain:synapsisbysdr.vercel.app)",
+      "Bash(BASE=\"https://synapsisbysdr.vercel.app\")",
+      "Bash(OUT=\"C:/Users/ritva/OneDrive/Documents/ritvaldiwebsite/images\")",
+      "Bash(for i in 1 2 3 4 5 6)",
+      "Bash(do curl -s -L -o \"$OUT/synapsis-project-$i.jpg\" \"$BASE/projects/project-$i.jpg\")",
+      "Bash(echo:*)",
+      "Bash(done)",
+      "Bash(curl:*)",
+      "WebFetch(domain:synapsis.id)",
+      "Bash(py -m pip install:*)",
+      "Bash(py -c:*)"
+    ]
+  }
+}
