@@ -190,6 +190,43 @@ const translations = {
     'nearon.solar.title':      'Nearon Solar Mast',
     'nearon.solar.desc':       'Solar-powered portable surveillance platform built for mining sites and remote operations with no grid dependency.',
 
+    /* Blog */
+    'nav.blog':              'Blog',
+    'blog.section.desc':     'Insights on entrepreneurship, AI, IoT, and leadership — from the trenches of building a tech company in Indonesia.',
+    'blog.cat.leadership':      'Leadership',
+    'blog.cat.ai':              'AI',
+    'blog.cat.tech':            'Technology',
+    'blog.cat.beyond':          'Beyond Work',
+    'blog.cat.techleadership':  'Tech Leadership',
+    'blog.post1.title':      'Bridging Sales Ambition & Engineering Reality in a Tech Startup',
+    'blog.post1.synopsis':   'Research shows 74% of IoT projects fail — not because of technology, but because Sales and Engineering don\'t speak the same language. Here\'s how to build the bridge.',
+    'blog.post1.date':       'March 2025',
+    'blog.post1.read':       '6 min read',
+    'blog.post2.title':      'AI as a Co-Founder: How I Use LLMs to Lead Better',
+    'blog.post2.synopsis':   'How I\'ve integrated language models into my daily leadership workflow — from strategic planning and decision-making to team communication and product direction.',
+    'blog.post2.date':       'February 2025',
+    'blog.post2.read':       '6 min read',
+    'blog.post3.title':      'IoT Meets AI: The Industrial Revolution Indonesia Needs',
+    'blog.post3.synopsis':   'Why the convergence of sensor networks and artificial intelligence will define the next wave of industrial technology — and what it means for companies operating in Indonesia today.',
+    'blog.post3.date':       'January 2025',
+    'blog.post3.read':       '7 min read',
+    'blog.post4.title':      'Golf, Business, and the Art of Thinking Strategically',
+    'blog.post4.synopsis':   'Golf taught me patience, risk management, and how to perform under pressure. Here\'s how the fairway became my laboratory for becoming a better founder and leader.',
+    'blog.post4.date':       'December 2024',
+    'blog.post4.read':       '5 min read',
+    'blog.view.all':         'View all posts →',
+    'blog.page.eyebrow':     'Writing & Thoughts',
+    'blog.page.headline':    'Ideas worth sharing.',
+    'blog.page.desc':        'Essays on entrepreneurship, AI, IoT, and leadership — from someone building in the field.',
+    'blog.subscribe.label':  'Newsletter',
+    'blog.subscribe.title':  'Get new posts delivered to your inbox.',
+    'blog.subscribe.desc':   'No spam. One essay at a time — on building companies, leveraging AI, and leading teams.',
+    'blog.subscribe.ph':     'your@email.com',
+    'blog.subscribe.btn':    'Subscribe',
+    'blog.subscribe.sending':'Subscribing…',
+    'blog.subscribe.sent':   'You\'re subscribed. Thank you!',
+    'blog.subscribe.error':  'Something went wrong. Please try again.',
+
     /* Footer */
     'footer.copy': '© 2025. Founder & CEO, Synapsis.Id.',
     'footer.top':  '↑ Top',
@@ -380,6 +417,43 @@ const translations = {
     'nearon.solar.title':      'Nearon Solar Mast',
     'nearon.solar.desc':       'Platform pengawasan portabel bertenaga surya yang dirancang untuk lokasi tambang dan operasi terpencil tanpa ketergantungan jaringan listrik.',
 
+    /* Blog */
+    'nav.blog':              'Blog',
+    'blog.section.desc':     'Wawasan tentang kewirausahaan, AI, IoT, dan kepemimpinan — dari pengalaman nyata membangun perusahaan teknologi di Indonesia.',
+    'blog.cat.leadership':      'Kepemimpinan',
+    'blog.cat.ai':              'AI',
+    'blog.cat.tech':            'Teknologi',
+    'blog.cat.beyond':          'Di Luar Kerja',
+    'blog.cat.techleadership':  'Tech Leadership',
+    'blog.post1.title':      'Seni Menyelaraskan Ambisi Sales & Realitas Engineering di Startup Tech',
+    'blog.post1.synopsis':   'Riset menyebut 74% proyek IoT gagal — bukan karena teknologinya, tapi karena Sales dan Engineering tidak bicara dalam bahasa yang sama. Ini cara membangun jembatannya.',
+    'blog.post1.date':       'Maret 2025',
+    'blog.post1.read':       '6 menit baca',
+    'blog.post2.title':      'AI sebagai Co-Founder: Bagaimana Saya Menggunakan LLM untuk Memimpin Lebih Baik',
+    'blog.post2.synopsis':   'Bagaimana saya mengintegrasikan model bahasa ke dalam alur kerja kepemimpinan sehari-hari — dari perencanaan strategis dan pengambilan keputusan hingga komunikasi tim dan arah produk.',
+    'blog.post2.date':       'Februari 2025',
+    'blog.post2.read':       '6 menit baca',
+    'blog.post3.title':      'IoT Bertemu AI: Revolusi Industri yang Indonesia Butuhkan',
+    'blog.post3.synopsis':   'Mengapa konvergensi jaringan sensor dan kecerdasan buatan akan mendefinisikan gelombang berikutnya teknologi industri — dan apa artinya bagi perusahaan yang beroperasi di Indonesia saat ini.',
+    'blog.post3.date':       'Januari 2025',
+    'blog.post3.read':       '7 menit baca',
+    'blog.post4.title':      'Golf, Bisnis, dan Seni Berpikir Strategis',
+    'blog.post4.synopsis':   'Golf mengajarkan saya kesabaran, manajemen risiko, dan cara tampil di bawah tekanan. Inilah bagaimana lapangan golf menjadi laboratorium saya untuk menjadi founder dan pemimpin yang lebih baik.',
+    'blog.post4.date':       'Desember 2024',
+    'blog.post4.read':       '5 menit baca',
+    'blog.view.all':         'Lihat semua tulisan →',
+    'blog.page.eyebrow':     'Tulisan & Pemikiran',
+    'blog.page.headline':    'Ide yang layak dibagikan.',
+    'blog.page.desc':        'Esai tentang kewirausahaan, AI, IoT, dan kepemimpinan — dari seseorang yang membangun di lapangan.',
+    'blog.subscribe.label':  'Newsletter',
+    'blog.subscribe.title':  'Dapatkan tulisan terbaru langsung ke inbox Anda.',
+    'blog.subscribe.desc':   'Tanpa spam. Satu esai sekaligus — tentang membangun perusahaan, memanfaatkan AI, dan memimpin tim.',
+    'blog.subscribe.ph':     'email@anda.com',
+    'blog.subscribe.btn':    'Berlangganan',
+    'blog.subscribe.sending':'Mendaftar…',
+    'blog.subscribe.sent':   'Anda telah berlangganan. Terima kasih!',
+    'blog.subscribe.error':  'Ada kesalahan. Silakan coba lagi.',
+
     /* Footer */
     'footer.copy': '© 2025. Pendiri & CEO, Synapsis.Id.',
     'footer.top':  '↑ Atas',
@@ -568,6 +642,78 @@ form.addEventListener('submit', async e => {
   btn.innerHTML = `<span>${t['form.submit'] || 'Send Message'}</span><span class="btn-arrow">→</span>`;
   btn.disabled  = false;
 });
+
+/* ── FLOATING SUBSCRIBE WIDGET ── */
+const floatSubBtn    = document.getElementById('floatSubBtn');
+const floatSubPopup  = document.getElementById('floatSubPopup');
+const floatSubClose  = document.getElementById('floatSubClose');
+const subscribeForm  = document.getElementById('subscribe-form');
+
+if (floatSubBtn && floatSubPopup) {
+  // toggle popup
+  floatSubBtn.addEventListener('click', () => {
+    const isOpen = floatSubPopup.classList.toggle('open');
+    floatSubBtn.setAttribute('aria-expanded', isOpen);
+    if (isOpen) floatSubPopup.querySelector('input')?.focus();
+  });
+
+  // close button
+  floatSubClose?.addEventListener('click', () => {
+    floatSubPopup.classList.remove('open');
+    floatSubBtn.setAttribute('aria-expanded', 'false');
+  });
+
+  // close on outside click
+  document.addEventListener('click', e => {
+    if (!floatSubBtn.contains(e.target) && !floatSubPopup.contains(e.target)) {
+      floatSubPopup.classList.remove('open');
+      floatSubBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
+
+if (subscribeForm) {
+  const subMsg = document.getElementById('subscribe-msg');
+  subscribeForm.addEventListener('submit', async e => {
+    e.preventDefault();
+    const btn = subscribeForm.querySelector('.btn-subscribe');
+    btn.textContent = 'Mengirim…';
+    btn.disabled    = true;
+    subMsg.textContent = '';
+    subMsg.className   = '';
+
+    try {
+      const res = await fetch('https://formspree.io/f/YOUR_NEWSLETTER_FORM_ID', {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ email: subscribeForm.querySelector('#sub-email').value, _subject: 'New Newsletter Subscriber' }),
+      });
+      if (res.ok) {
+        subMsg.textContent = 'Berhasil! Terima kasih sudah berlangganan.';
+        subMsg.className   = 'sub-success';
+        subscribeForm.reset();
+        // update trigger button to subscribed state
+        if (floatSubBtn) {
+          floatSubBtn.classList.add('subscribed');
+          floatSubBtn.querySelector('span').textContent = 'Berlangganan ✓';
+        }
+        setTimeout(() => {
+          floatSubPopup?.classList.remove('open');
+          floatSubBtn?.setAttribute('aria-expanded', 'false');
+        }, 2500);
+      } else {
+        subMsg.textContent = 'Gagal. Coba lagi atau hubungi langsung.';
+        subMsg.className   = 'sub-error';
+      }
+    } catch {
+      subMsg.textContent = 'Gagal. Coba lagi atau hubungi langsung.';
+      subMsg.className   = 'sub-error';
+    }
+
+    btn.textContent = 'Berlangganan';
+    btn.disabled    = false;
+  });
+}
 
 /* ── HERO PARALLAX (desktop / hover-capable only) ── */
 const heroSection = document.getElementById('hero');
