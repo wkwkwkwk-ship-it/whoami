@@ -850,6 +850,20 @@ footer { background: var(--bg); border-top: 1px solid var(--border); padding: 32
 .article-byline-sep { color: var(--border-hover); }
 .article-byline-author { color: var(--text-sub); font-weight: 500; }
 
+.article-hero-image {
+  width: 100%;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.article-hero-image img {
+  width: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  display: block;
+}
+
 .article-body-wrap {
   padding: 64px 0 80px;
   background: var(--bg);
