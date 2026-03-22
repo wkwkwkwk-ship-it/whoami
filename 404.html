@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Halaman Tidak Ditemukan — Randi Ritvaldi</title>
+  <!-- Redirect ke homepage setelah 5 detik -->
+  <meta http-equiv="refresh" content="5;url=/" />
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9BFT3PYG3D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9BFT3PYG3D');
+  </script>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+  <style>
+    .error-wrap {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      gap: 1.5rem;
+    }
+    .error-code {
+      font-family: var(--serif);
+      font-size: clamp(5rem, 15vw, 9rem);
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+      margin: 0;
+    }
+    .error-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--text);
+      margin: 0;
+    }
+    .error-desc {
+      color: var(--text-sub);
+      max-width: 420px;
+      line-height: 1.7;
+      margin: 0;
+    }
+    .error-redirect {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    .error-btn {
+      display: inline-block;
+      padding: 0.75rem 2rem;
+      background: var(--accent);
+      color: var(--bg);
+      border-radius: var(--radius);
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .error-btn:hover { opacity: 0.85; }
+  </style>
+</head>
+<body>
+  <div class="error-wrap">
+    <p class="error-code">404</p>
+    <h1 class="error-title">Halaman Tidak Ditemukan</h1>
+    <p class="error-desc">Maaf, halaman yang Anda cari tidak ada atau telah dipindahkan. Anda akan diarahkan ke halaman utama secara otomatis.</p>
+    <p class="error-redirect">Dialihkan dalam 5 detik…</p>
+    <a href="/" class="error-btn">Kembali ke Beranda</a>
+    <a href="/blog" style="color:var(--accent);font-size:0.9rem;">Atau buka Blog →</a>
+  </div>
+  <script src="/main.js"></script>
+</body>
+</html>

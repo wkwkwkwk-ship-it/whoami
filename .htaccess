@@ -1,0 +1,26 @@
+# ── ritvaldi.my.id — Apache Configuration ──────────────────────────────────
+# Requires Apache mod_rewrite (enabled on most shared hosting by default)
+
+Options -MultiViews
+RewriteEngine On
+
+# ── 1. Redirect /index.html → / (clean root)
+RewriteCond %{THE_REQUEST} \s/index\.html[\s?] [NC]
+RewriteRule ^ / [R=301,L]
+
+# ── 2. Redirect any other .html URL → clean URL without .html (301)
+#    e.g. /blog.html → /blog
+#    e.g. /blog/menyelaraskan-sales-engineering-startup-tech.html → /blog/menyelaraskan-...
+RewriteCond %{THE_REQUEST} \s/(.+?)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# ── 3. Internally rewrite clean URLs → .html files (no redirect loop)
+#    e.g. request /blog → serve /blog.html
+#    e.g. request /blog/post-slug → serve /blog/post-slug.html
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
+
+# ── 4. Custom 404: redirect unknown URLs → homepage
+ErrorDocument 404 /404.html
