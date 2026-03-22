@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /.claude/
+Disallow: /article/*.md
+Disallow: /article/*.exe
 
 Sitemap: https://ritvaldi.my.id/sitemap.xml
