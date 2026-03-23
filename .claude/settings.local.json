@@ -14,7 +14,10 @@
       "WebFetch(domain:synapsis.id)",
       "Bash(py -m pip install:*)",
       "Bash(py -c:*)",
-      "Bash(head:*)"
+      "Bash(head:*)",
+      "Bash(ls:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ]
   }
 }
