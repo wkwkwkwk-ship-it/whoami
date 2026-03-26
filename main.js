@@ -228,7 +228,7 @@ const translations = {
     'blog.subscribe.error':  'Something went wrong. Please try again.',
 
     /* Footer */
-    'footer.copy': '© 2025. Founder & CEO, Synapsis.Id.',
+    'footer.copy': '© 2026. Founder & CEO, Synapsis.Id.',
     'footer.top':  '↑ Top',
   },
 
@@ -455,7 +455,7 @@ const translations = {
     'blog.subscribe.error':  'Ada kesalahan. Silakan coba lagi.',
 
     /* Footer */
-    'footer.copy': '© 2025. Pendiri & CEO, Synapsis.Id.',
+    'footer.copy': '© 2026. Pendiri & CEO, Synapsis.Id.',
     'footer.top':  '↑ Atas',
   }
 };
