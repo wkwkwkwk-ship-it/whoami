@@ -49,7 +49,7 @@ const translations = {
     'exp.months':          'months',
     'exp.years':           'years',
     'exp.syn.ceo.title':   'Founder & Chief Executive Officer',
-    'exp.syn.ceo.desc':    'Founded Synapsis.Id and have led it as CEO since January 2020 — growing it from an early-stage IoT hardware venture into Indonesia\'s leading IoT solutions provider.',
+    'exp.syn.ceo.desc':    'Founded Synapsis.Id and have led it as CEO since January 2020 — growing it from an early-stage IoT hardware venture into Indonesia\'s most trusted end-to-end IoT and AI solutions company.',
     'exp.syn.ceo.bullets': '<li>Built the company from the ground up — from hardware design to a full-service digital transformation provider</li><li>Defined product strategy, technology roadmap, and go-to-market positioning</li><li>Built and led cross-functional teams across hardware, software, and business development</li><li>Built Synapsis into Indonesia\'s most trusted IoT and AI solutions company — from hardware to intelligence</li><li>Currently integrating AI capabilities into the company\'s product and operations strategy</li>',
     'tag.founding':        'Company Founding',
     'tag.team':            'Team Building',
