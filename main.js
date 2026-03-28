@@ -20,7 +20,7 @@ const translations = {
 
     /* Hero */
     'hero.headline':    'Founder.<br /><em>Engineer.</em><br />AI-Powered.',
-    'hero.desc':        'I founded <strong>Synapsis.Id</strong> — Indonesia\'s leading IoT solutions provider. Today I\'m harnessing the power of AI to build smarter products, sharper teams, and a more intelligent future for technology companies.',
+    'hero.desc':        'I founded <strong>Synapsis.Id</strong> — building Indonesia\'s most trusted IoT and AI solutions, from the factory floor to the boardroom. Today I\'m applying AI as a force multiplier — building smarter products, leaner operations, and a more intelligent future for Indonesian industry.',
     'hero.btn.journey': 'My Journey',
     'hero.btn.contact': 'Get In Touch',
 
@@ -34,8 +34,8 @@ const translations = {
 
     /* About */
     'about.headline': 'Building companies, leading teams, and <em>thinking with AI.</em>',
-    'about.p1':       'An IoT engineer-turned-founder based in Jakarta, Indonesia. I hold a <strong>Bachelor\'s in Electrical Engineering (Control Systems) from Universitas Gadjah Mada</strong> and a <strong>Master of Science in Communication Engineering from the University of Manchester</strong>.',
-    'about.p2':       'I am the <strong>Founder of Synapsis.Id</strong>, which I built from the hardware bench — writing firmware, wiring sensors, designing IoT devices — before scaling it into one of Indonesia\'s most recognised IoT solution providers. My expertise spans the full stack: embedded hardware, cloud connectivity, and end-to-end IoT framework architecture from physical measurement to user interface.',
+    'about.p1':       'An engineer who became a founder — and never stopped thinking like both. I hold a <strong>Bachelor\'s in Electrical Engineering (Control Systems) from Universitas Gadjah Mada</strong> and a <strong>Master of Science in Communication Engineering from the University of Manchester</strong>.',
+    'about.p2':       'I am the <strong>Founder of Synapsis.Id</strong>, which I built from the hardware bench — writing firmware, wiring sensors, designing IoT devices — before scaling it into Indonesia\'s most trusted end-to-end IoT and AI solutions company, serving enterprise clients across manufacturing, mining, smart city, and oil & gas. My expertise spans the full stack: embedded hardware, cloud connectivity, and end-to-end IoT framework architecture from physical measurement to user interface.',
     'about.p3':       'Today, I\'m applying the lens of <strong>Artificial Intelligence</strong> to how I build, manage, and lead. I also write, speak, and engage on management, leadership, and entrepreneurship, drawing from over six years of building and running a tech company from scratch.',
     'pillar.1':       'Founder Mindset',
     'pillar.2':       'IoT Architecture',
@@ -50,7 +50,7 @@ const translations = {
     'exp.years':           'years',
     'exp.syn.ceo.title':   'Founder & Chief Executive Officer',
     'exp.syn.ceo.desc':    'Founded Synapsis.Id and have led it as CEO since January 2020 — growing it from an early-stage IoT hardware venture into Indonesia\'s leading IoT solutions provider.',
-    'exp.syn.ceo.bullets': '<li>Built the company from the ground up — from hardware design to a full-service digital transformation provider</li><li>Defined product strategy, technology roadmap, and go-to-market positioning</li><li>Built and led cross-functional teams across hardware, software, and business development</li><li>Established Synapsis as the leading IoT provider in Indonesia</li><li>Currently integrating AI capabilities into the company\'s product and operations strategy</li>',
+    'exp.syn.ceo.bullets': '<li>Built the company from the ground up — from hardware design to a full-service digital transformation provider</li><li>Defined product strategy, technology roadmap, and go-to-market positioning</li><li>Built and led cross-functional teams across hardware, software, and business development</li><li>Built Synapsis into Indonesia\'s most trusted IoT and AI solutions company — from hardware to intelligence</li><li>Currently integrating AI capabilities into the company\'s product and operations strategy</li>',
     'tag.founding':        'Company Founding',
     'tag.team':            'Team Building',
     'exp.syn.hw.title':    'Hardware Engineer',
@@ -109,7 +109,7 @@ const translations = {
     'edu.sma.degree': 'High School — Science',
 
     /* AI */
-    'ai.headline':   'Using AI as leverage — to build faster, decide sharper, <em>and lead better.</em>',
+    'ai.headline':   'AI is not a tool. It\'s a thinking partner — <em>and I use it as one.</em>',
     'ai.p1':         'Coming from a background of making machines communicate through IoT, I see <strong>Artificial Intelligence</strong> as the next frontier: making those systems not just transmit data, but <strong>reason, predict, and act</strong>. The convergence of IoT infrastructure with intelligent AI agents is what I believe will define the next wave of industrial technology in Indonesia and beyond.',
     'ai.p2':         'But my AI interest goes beyond the technical. I\'m actively exploring how <strong>AI reshapes leadership and management</strong> — from AI-augmented decision-making and automated workflows, to how founders can use LLMs as a thinking partner to move faster and scale more intelligently.',
     'ai.card1.title':'LLMs & Agentic AI',
@@ -153,7 +153,7 @@ const translations = {
 
     /* Contact */
     'contact.headline': 'Let\'s Connect',
-    'contact.desc':     'Whether you\'re exploring IoT or AI solutions, looking for a collaboration, want to talk leadership, or just need a golf partner in Jakarta — reach out.',
+    'contact.desc':     'Whether you\'re looking to solve an industrial challenge with IoT or AI, explore a collaboration, discuss leadership and entrepreneurship, or simply need a golf partner in Jakarta — I\'d love to connect.',
     'contact.email':    'Email',
     'contact.company':  'Company',
     'form.name.label':  'Name',

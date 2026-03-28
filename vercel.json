@@ -3,6 +3,7 @@
   "redirects": [
     { "source": "/index.html",       "destination": "/",            "permanent": true },
     { "source": "/blog.html",        "destination": "/blog",        "permanent": true },
+    { "source": "/blog/menyelaraskan-sales-engineering-startup-tech.html", "destination": "/blog/menyelaraskan-sales-engineering-startup-tech", "permanent": true },
     { "source": "/blog/:slug.html",  "destination": "/blog/:slug",  "permanent": true }
   ],
   "rewrites": [
