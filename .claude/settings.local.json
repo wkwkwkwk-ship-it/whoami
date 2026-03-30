@@ -25,7 +25,27 @@
       "Bash(find C:/Users/ritva/OneDrive/Documents/ritvaldiwebsite -type f \\\\\\(-name *.png -o -name *.jpg -o -name *.jpeg -o -name *.gif -o -name *.webp \\\\\\))",
       "Bash(python -c \"from PIL import Image; print\\(''Pillow OK''\\)\")",
       "Bash(python3 -c \"from PIL import Image; print\\(''Pillow OK''\\)\")",
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "Bash(npm --version)",
+      "Bash(python3 -c \":*)",
+      "Bash(python3 -c \"import PIL; print\\(''''PIL ok''''\\)\")",
+      "Bash(magick --version)",
+      "Bash(ffmpeg -version)",
+      "Bash(npm list:*)",
+      "Bash(python3 -c \"import PIL; print\\(''PIL ok''\\)\")",
+      "Bash(python3 -c \"from PIL import Image; print\\(''Pillow ok''\\)\")",
+      "Bash(where python:*)",
+      "Bash(where py:*)",
+      "Bash(py --version)",
+      "WebFetch(domain:www.cnnindonesia.com)",
+      "WebFetch(domain:thediplomat.com)",
+      "WebFetch(domain:www.thejakartapost.com)",
+      "WebFetch(domain:news.microsoft.com)",
+      "WebFetch(domain:www.cloudcomputing.id)",
+      "WebFetch(domain:www.alliancembs.manchester.ac.uk)",
+      "WebFetch(domain:ugm.ac.id)",
+      "WebFetch(domain:www.idntimes.com)",
+      "WebFetch(domain:aerospace.ugm.ac.id)"
     ]
   }
 }

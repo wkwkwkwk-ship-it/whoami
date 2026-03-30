@@ -184,13 +184,16 @@
 
   <!-- ── ARTICLE HERO IMAGE ── -->
   <div class="article-hero-image">
-    <img
-      src="../article/belajar-ai-lewat-hp-produktivitas-back-to-work.jpg"
-      alt="Pekerja kantoran belajar AI lewat smartphone untuk meningkatkan produktivitas kerja"
-      width="1200"
-      height="630"
-      fetchpriority="high"
-    />
+    <picture>
+      <source srcset="../article/belajar-ai-lewat-hp-produktivitas-back-to-work.webp" type="image/webp" />
+      <img
+        src="../article/belajar-ai-lewat-hp-produktivitas-back-to-work.jpg"
+        alt="Pekerja kantoran belajar AI lewat smartphone untuk meningkatkan produktivitas kerja"
+        width="1200"
+        height="630"
+        fetchpriority="high"
+      />
+    </picture>
   </div>
 
   <!-- ── ARTICLE BODY ── -->
@@ -216,14 +219,18 @@
 
           <!-- Vision AI image -->
           <figure style="margin: 2rem 0 2.5rem;">
-            <img
-              src="../article/vision-ai-ekstraksi-dokumen-otomatisasi-office.jpg"
-              alt="Menggunakan Vision AI di HP untuk memindai dan merangkum dokumen kantor secara otomatis"
-              width="1200"
-              height="630"
-              loading="lazy"
-              style="width:100%;border-radius:var(--radius-lg);"
-            />
+            <picture>
+              <source srcset="../article/vision-ai-ekstraksi-dokumen-otomatisasi-office.webp" type="image/webp" />
+              <img
+                src="../article/vision-ai-ekstraksi-dokumen-otomatisasi-office.jpg"
+                alt="Menggunakan Vision AI di HP untuk memindai dan merangkum dokumen kantor secara otomatis"
+                width="1200"
+                height="630"
+                loading="lazy"
+                decoding="async"
+                style="width:100%;border-radius:var(--radius-lg);"
+              />
+            </picture>
             <figcaption style="font-size:0.85rem;color:var(--text-sub);margin-top:0.75rem;text-align:center;">Vision AI memungkinkan smartphone Anda menganalisis dan merangkum dokumen fisik secara otomatis dalam hitungan detik.</figcaption>
           </figure>
 

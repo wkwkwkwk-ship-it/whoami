@@ -184,13 +184,16 @@
 
   <!-- ── ARTICLE HERO IMAGE ── -->
   <div class="article-hero-image">
-    <img
-      src="../article/filosofi-cangkang-telur-ketidaksempurnaan-karir-profesional.jpg"
-      alt="Secangkir kopi dan telur dadar di meja sarapan sebagai metafora filosofi ketidaksempurnaan dalam karir"
-      width="1200"
-      height="630"
-      fetchpriority="high"
-    />
+    <picture>
+      <source srcset="../article/filosofi-cangkang-telur-ketidaksempurnaan-karir-profesional.webp" type="image/webp" />
+      <img
+        src="../article/filosofi-cangkang-telur-ketidaksempurnaan-karir-profesional.jpg"
+        alt="Secangkir kopi dan telur dadar di meja sarapan sebagai metafora filosofi ketidaksempurnaan dalam karir"
+        width="1200"
+        height="630"
+        fetchpriority="high"
+      />
+    </picture>
   </div>
 
   <!-- ── ARTICLE BODY ── -->
@@ -242,14 +245,18 @@
 
           <!-- Stoicism image -->
           <figure style="margin: 2rem 0 2.5rem;">
-            <img
-              src="../article/stoicism-resiliensi-profesional-marcus-aurelius.jpg"
-              alt="Metafora stoicism dan resiliensi profesional dalam menghadapi ketidaksempurnaan di tempat kerja"
-              width="1200"
-              height="630"
-              loading="lazy"
-              style="width:100%;border-radius:var(--radius-lg);"
-            />
+            <picture>
+              <source srcset="../article/stoicism-resiliensi-profesional-marcus-aurelius.webp" type="image/webp" />
+              <img
+                src="../article/stoicism-resiliensi-profesional-marcus-aurelius.jpg"
+                alt="Metafora stoicism dan resiliensi profesional dalam menghadapi ketidaksempurnaan di tempat kerja"
+                width="1200"
+                height="630"
+                loading="lazy"
+                decoding="async"
+                style="width:100%;border-radius:var(--radius-lg);"
+              />
+            </picture>
             <figcaption style="font-size:0.85rem;color:var(--text-sub);margin-top:0.75rem;text-align:center;">Stoicism mengajarkan satu prinsip sederhana: kendalikan respons Anda, bukan peristiwanya.</figcaption>
           </figure>
 
