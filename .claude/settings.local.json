@@ -17,7 +17,15 @@
       "Bash(head:*)",
       "Bash(ls:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(grep -i \"img src\\\\|alt=\" /c/Users/ritva/OneDrive/Documents/ritvaldiwebsite/blog/*.html)",
+      "Bash(wc:*)",
+      "Bash(grep:*)",
+      "Bash(git push:*)",
+      "Bash(find C:/Users/ritva/OneDrive/Documents/ritvaldiwebsite -type f \\\\\\(-name *.png -o -name *.jpg -o -name *.jpeg -o -name *.gif -o -name *.webp \\\\\\))",
+      "Bash(python -c \"from PIL import Image; print\\(''Pillow OK''\\)\")",
+      "Bash(python3 -c \"from PIL import Image; print\\(''Pillow OK''\\)\")",
+      "Bash(python:*)"
     ]
   }
 }
