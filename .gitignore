@@ -1,3 +1,8 @@
 node_modules/
 package-lock.json
 package.json
+
+# Source image files (converted versions already committed as .jpg + .webp)
+article/*.png
+images/**/*.png
+!images/synapsis-logo.png

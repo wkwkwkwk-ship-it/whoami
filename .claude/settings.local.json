@@ -56,7 +56,14 @@
       "Bash(npm install:*)",
       "Bash(sed -i 's|<script src=\"/main\\\\.js\">|<script src=\"/main.js\" defer>|g' 404.html)",
       "Bash(sed -i 's|<script src=\"main\\\\.js\">|<script src=\"main.js\" defer>|g' blog.html index.html)",
-      "Bash(sed -i 's|<script src=\"\\\\.\\\\./main\\\\.js\">|<script src=\"../main.js\" defer>|g' blog/forensik-digital-verifikasi-konten-perang-era-ai.html blog/filosofi-cangkang-telur-menghadapi-ketidaksempurnaan-karir.html blog/menjadi-profesional-ai-augmented-man-behind-the-gun.html blog/konflik-timur-tengah-peluang-efisiensi-iot-ai-industri-indonesia.html blog/ramadhan-filosofi-golf-menilai-karakter-dan-silaturahmi-bisnis.html blog/menyelaraskan-sales-engineering-startup-tech.html blog/self-leadership-cara-tetap-driven-saat-motivasi-kerja-hilang.html blog/belajar-ai-lewat-hp-trik-produktivitas-kerja-pemula.html)"
+      "Bash(sed -i 's|<script src=\"\\\\.\\\\./main\\\\.js\">|<script src=\"../main.js\" defer>|g' blog/forensik-digital-verifikasi-konten-perang-era-ai.html blog/filosofi-cangkang-telur-menghadapi-ketidaksempurnaan-karir.html blog/menjadi-profesional-ai-augmented-man-behind-the-gun.html blog/konflik-timur-tengah-peluang-efisiensi-iot-ai-industri-indonesia.html blog/ramadhan-filosofi-golf-menilai-karakter-dan-silaturahmi-bisnis.html blog/menyelaraskan-sales-engineering-startup-tech.html blog/self-leadership-cara-tetap-driven-saat-motivasi-kerja-hilang.html blog/belajar-ai-lewat-hp-trik-produktivitas-kerja-pemula.html)",
+      "Bash(sed -i 's|href=\"../article/belajar-ai-lewat-hp-produktivitas-back-to-work\\\\.jpg\" fetchpriority=\"high\"|href=\"../article/belajar-ai-lewat-hp-produktivitas-back-to-work.webp\" type=\"image/webp\" fetchpriority=\"high\"|' blog/belajar-ai-lewat-hp-trik-produktivitas-kerja-pemula.html)",
+      "Bash(sed -i 's|href=\"../article/filosofi-cangkang-telur-ketidaksempurnaan-karir-profesional\\\\.jpg\" fetchpriority=\"high\"|href=\"../article/filosofi-cangkang-telur-ketidaksempurnaan-karir-profesional.webp\" type=\"image/webp\" fetchpriority=\"high\"|' blog/filosofi-cangkang-telur-menghadapi-ketidaksempurnaan-karir.html)",
+      "Bash(sed -i 's|href=\"../images/blog/forensik-digital-verifikasi-konten-perang-ai\\\\.jpg\" fetchpriority=\"high\"|href=\"../images/blog/forensik-digital-verifikasi-konten-perang-ai.webp\" type=\"image/webp\" fetchpriority=\"high\"|' blog/forensik-digital-verifikasi-konten-perang-era-ai.html)",
+      "Bash(sed -i 's|href=\"../images/blog/konflik-energi-peluang-transformasi-digital-industri\\\\.jpg\" fetchpriority=\"high\"|href=\"../images/blog/konflik-energi-peluang-transformasi-digital-industri.webp\" type=\"image/webp\" fetchpriority=\"high\"|' blog/konflik-timur-tengah-peluang-efisiensi-iot-ai-industri-indonesia.html)",
+      "Bash(sed -i 's|href=\"../images/blog/profesional-ai-augmented-man-behind-the-gun\\\\.jpg\" fetchpriority=\"high\"|href=\"../images/blog/profesional-ai-augmented-man-behind-the-gun.webp\" type=\"image/webp\" fetchpriority=\"high\"|' blog/menjadi-profesional-ai-augmented-man-behind-the-gun.html)",
+      "Bash(cp style.min.css style.css)",
+      "Bash(rm style.min.css)"
     ]
   }
 }
