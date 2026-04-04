@@ -45,7 +45,18 @@
       "WebFetch(domain:www.alliancembs.manchester.ac.uk)",
       "WebFetch(domain:ugm.ac.id)",
       "WebFetch(domain:www.idntimes.com)",
-      "WebFetch(domain:aerospace.ugm.ac.id)"
+      "WebFetch(domain:aerospace.ugm.ac.id)",
+      "WebFetch(domain:edukasi.kompas.com)",
+      "WebFetch(domain:sarjana.jteti.ugm.ac.id)",
+      "Bash(node:*)",
+      "Bash(curl -L -A \"Mozilla/5.0\" -o press-2.jpg \"https://asset.kompas.com/crops/9U61v0sACuQUCxWcV6PiJgcc2Kw=/0x0:1000x667/1200x675/filters:watermark\\(data/photo/2026/01/30/697c819b2dbec.png,0,-0,1\\)/data/photo/2018/07/27/558366883.jpg\" --max-time 30 -w \"press-2: %{http_code}\\\\n\" -s)",
+      "Bash(cwebp --version)",
+      "Bash(powershell -Command \"Add-Type -AssemblyName System.Drawing; Write-Host ''System.Drawing ok''\")",
+      "Bash(node -e \"console.log\\(process.version\\)\")",
+      "Bash(npm install:*)",
+      "Bash(sed -i 's|<script src=\"/main\\\\.js\">|<script src=\"/main.js\" defer>|g' 404.html)",
+      "Bash(sed -i 's|<script src=\"main\\\\.js\">|<script src=\"main.js\" defer>|g' blog.html index.html)",
+      "Bash(sed -i 's|<script src=\"\\\\.\\\\./main\\\\.js\">|<script src=\"../main.js\" defer>|g' blog/forensik-digital-verifikasi-konten-perang-era-ai.html blog/filosofi-cangkang-telur-menghadapi-ketidaksempurnaan-karir.html blog/menjadi-profesional-ai-augmented-man-behind-the-gun.html blog/konflik-timur-tengah-peluang-efisiensi-iot-ai-industri-indonesia.html blog/ramadhan-filosofi-golf-menilai-karakter-dan-silaturahmi-bisnis.html blog/menyelaraskan-sales-engineering-startup-tech.html blog/self-leadership-cara-tetap-driven-saat-motivasi-kerja-hilang.html blog/belajar-ai-lewat-hp-trik-produktivitas-kerja-pemula.html)"
     ]
   }
 }
