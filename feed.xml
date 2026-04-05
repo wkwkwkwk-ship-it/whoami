@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Blog — Muhamad Randi Ritvaldi</title>
+    <link>https://ritvaldi.my.id/blog</link>
+    <description>Esai tentang kewirausahaan, AI, IoT, dan kepemimpinan dari Founder &amp; CEO Synapsis.Id.</description>
+    <language>id</language>
+    <managingEditor>ritvaldi@synapsis.id (Muhamad Randi Ritvaldi)</managingEditor>
+    <webMaster>ritvaldi@synapsis.id (Muhamad Randi Ritvaldi)</webMaster>
+    <lastBuildDate>Mon, 06 Apr 2026 00:00:00 +0700</lastBuildDate>
+    <atom:link href="https://ritvaldi.my.id/feed.xml" rel="self" type="application/rss+xml" />
+    <image>
+      <url>https://ritvaldi.my.id/images/og-image.jpg</url>
+      <title>Blog — Muhamad Randi Ritvaldi</title>
+      <link>https://ritvaldi.my.id/blog</link>
+    </image>
+
+    <item>
+      <title>Agentic AI: Ketika AI Mulai Bekerja Sendiri Tanpa Disuruh</title>
+      <link>https://ritvaldi.my.id/blog/agentic-ai-ketika-ai-mulai-bekerja-sendiri-tanpa-disuruh</link>
+      <guid isPermaLink="true">https://ritvaldi.my.id/blog/agentic-ai-ketika-ai-mulai-bekerja-sendiri-tanpa-disuruh</guid>
+      <pubDate>Mon, 06 Apr 2026 00:00:00 +0700</pubDate>
+      <dc:creator>Muhamad Randi Ritvaldi</dc:creator>
+      <category>AI &amp; Produktivitas</category>
+      <description>Gartner memproyeksikan 40% enterprise applications akan punya AI agent di 2026. Apa artinya bagi pemimpin bisnis Indonesia — dan mengapa ini bukan sekadar tren teknologi berikutnya?</description>
+    </item>
+
+    <item>
+      <title>Forensik Digital: Cara Memverifikasi Konten Perang di Era AI</title>
+      <link>https://ritvaldi.my.id/blog/forensik-digital-verifikasi-konten-perang-era-ai</link>
+      <guid isPermaLink="true">https://ritvaldi.my.id/blog/forensik-digital-verifikasi-konten-perang-era-ai</guid>
+      <pubDate>Wed, 01 Apr 2026 00:00:00 +0700</pubDate>
+      <dc:creator>Muhamad Randi Ritvaldi</dc:creator>
+      <category>AI &amp; Produktivitas</category>
+      <description>Generative AI membuat konten manipulatif semakin murah dan cepat. Dari standar C2PA hingga prinsip Zero Trust — beberapa pendekatan untuk memverifikasi konten konflik secara lebih sistematis.</description>
+    </item>
+
+    <item>
+      <title>Di Tengah Konflik Timur Tengah, Saya Justru Melihat Sesuatu yang Berbeda</title>
+      <link>https://ritvaldi.my.id/blog/konflik-timur-tengah-peluang-efisiensi-iot-ai-industri-indonesia</link>
+      <guid isPermaLink="true">https://ritvaldi.my.id/blog/konflik-timur-tengah-peluang-efisiensi-iot-ai-industri-indonesia</guid>
+      <pubDate>Mon, 30 Mar 2026 00:00:00 +0700</pubDate>
+      <dc:creator>Muhamad Randi Ritvaldi</dc:creator>
+      <category>Tech Leadership</category>
+      <description>Harga minyak naik 45% dalam dua minggu. Tapi di balik tekanan geopolitik itu, ada satu peluang yang selama ini tertunda: IoT dan AI sebagai solusi efisiensi energi industri yang kini tidak bisa lagi ditunda.</description>
+    </item>
+
+    <item>
+      <title>Menjadi Profesional AI-Augmented: Ketika Senjata Canggih Tetap Butuh Penembak Jitu</title>
+      <link>https://ritvaldi.my.id/blog/menjadi-profesional-ai-augmented-man-behind-the-gun</link>
+      <guid isPermaLink="true">https://ritvaldi.my.id/blog/menjadi-profesional-ai-augmented-man-behind-the-gun</guid>
+      <pubDate>Sat, 28 Mar 2026 00:00:00 +0700</pubDate>
+      <dc:creator>Muhamad Randi Ritvaldi</dc:creator>
+      <category>AI &amp; Produktivitas</category>
+      <description>Di era AI, alat yang canggih tidak cukup. Yang membedakan profesional unggul adalah kemampuan menjadi penembak jitu — menggunakan AI sebagai force multiplier, bukan bergantung padanya.</description>
+    </item>
+
+    <item>
+      <title>Filosofi Cangkang Telur: Seni Menghadapi Ketidaksempurnaan dalam Karir dan Kehidupan</title>
+      <link>https://ritvaldi.my.id/blog/filosofi-cangkang-telur-menghadapi-ketidaksempurnaan-karir</link>
+      <guid isPermaLink="true">https://ritvaldi.my.id/blog/filosofi-cangkang-telur-menghadapi-ketidaksempurnaan-karir</guid>
+      <pubDate>Thu, 26 Mar 2026 00:00:00 +0700</pubDate>
+      <dc:creator>Muhamad Randi Ritvaldi</dc:creator>
+      <category>Philosophy &amp; Life</category>
+      <description>Sebuah cangkang kecil di sarapan pagi mengajarkan pelajaran besar tentang perfeksionisme, resiliensi, dan kedewasaan emosional dalam karir profesional.</description>
+    </item>
+
+    <item>
+      <title>Menyalakan Kembali Mesin: Mengapa Self-Leadership Jauh Lebih Penting dari Motivasi</title>
+      <link>https://ritvaldi.my.id/blog/self-leadership-cara-tetap-driven-saat-motivasi-kerja-hilang</link>
+      <guid isPermaLink="true">https://ritvaldi.my.id/blog/self-leadership-cara-tetap-driven-saat-motivasi-kerja-hilang</guid>
+      <pubDate>Wed, 25 Mar 2026 00:00:00 +0700</pubDate>
+      <dc:creator>Muhamad Randi Ritvaldi</dc:creator>
+      <category>Self-Leadership</category>
+      <description>Motivasi adalah mitos. Temukan tiga pilar Self-Leadership untuk tetap driven dan produktif di kantor, bahkan di hari-hari yang paling berat sekalipun.</description>
+    </item>
+
+    <item>
+      <title>Produktivitas 2.0: Cara Santai Belajar AI Lewat HP untuk Bersiap Kembali Bekerja</title>
+      <link>https://ritvaldi.my.id/blog/belajar-ai-lewat-hp-trik-produktivitas-kerja-pemula</link>
+      <guid isPermaLink="true">https://ritvaldi.my.id/blog/belajar-ai-lewat-hp-trik-produktivitas-kerja-pemula</guid>
+      <pubDate>Sun, 22 Mar 2026 00:00:00 +0700</pubDate>
+      <dc:creator>Muhamad Randi Ritvaldi</dc:creator>
+      <category>AI &amp; Produktivitas</category>
+      <description>Siap kembali bekerja pasca-liburan? Gunakan waktu luang Anda untuk belajar 3 trik AI praktis lewat smartphone yang akan memangkas jam kerja administratif Anda.</description>
+    </item>
+
+    <item>
+      <title>Madrasah Ramadhan dan Filosofi Golf: Laboratorium Karakter dan Esensi Silaturahmi Bisnis</title>
+      <link>https://ritvaldi.my.id/blog/ramadhan-filosofi-golf-menilai-karakter-dan-silaturahmi-bisnis</link>
+      <guid isPermaLink="true">https://ritvaldi.my.id/blog/ramadhan-filosofi-golf-menilai-karakter-dan-silaturahmi-bisnis</guid>
+      <pubDate>Fri, 20 Mar 2026 00:00:00 +0700</pubDate>
+      <dc:creator>Muhamad Randi Ritvaldi</dc:creator>
+      <category>Beyond Work</category>
+      <description>Ramadhan dan lapangan golf punya satu kesamaan tersembunyi: keduanya adalah laboratorium karakter yang paling jujur, tempat kita melihat siapa seseorang sesungguhnya.</description>
+    </item>
+
+    <item>
+      <title>Seni Mendengarkan di Tengah Hiruk-Pikuk Startup: Menjembatani Ambisi Sales dan Realitas Engineering</title>
+      <link>https://ritvaldi.my.id/blog/menyelaraskan-sales-engineering-startup-tech</link>
+      <guid isPermaLink="true">https://ritvaldi.my.id/blog/menyelaraskan-sales-engineering-startup-tech</guid>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 +0700</pubDate>
+      <dc:creator>Muhamad Randi Ritvaldi</dc:creator>
+      <category>Tech Leadership</category>
+      <description>Riset menunjukkan 74% proyek IoT gagal — bukan karena teknologinya, tapi karena Sales dan Engineering tidak berbicara dalam bahasa yang sama. Ini cara membangun jembatannya.</description>
+    </item>
+
+  </channel>
+</rss>
