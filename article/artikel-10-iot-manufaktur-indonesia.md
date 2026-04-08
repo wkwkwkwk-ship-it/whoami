@@ -59,13 +59,11 @@ cinematic depth of field, 8k detail.
 
 # Panduan IoT untuk Manufaktur Indonesia: Dari Pilot Project hingga ROI Terukur
 
-Seorang plant manager dari perusahaan manufaktur FMCG di Jawa Tengah pernah bercerita kepada saya: ia sudah tahu sejak tiga bulan lalu bahwa salah satu mesin produksinya berpotensi bermasalah. Datanya ada — getaran di luar normal, suhu bearing yang merangkak naik. Tapi semua data itu tersimpan di log mesin yang hanya dibuka kalau ada insiden.
+Di banyak fasilitas manufaktur Indonesia, data operasional sebenarnya sudah tersedia — getaran mesin yang tidak normal, suhu bearing yang merangkak naik, pola konsumsi energi yang tidak efisien. Masalahnya bukan tidak ada data. Masalahnya adalah data itu tersimpan di log yang tidak terhubung ke sistem pengambilan keputusan yang tepat waktu.
 
-Seminggu setelah percakapan kami, mesin itu berhenti di tengah shift malam. Total downtime: 14 jam. Biaya penggantian komponen dan kehilangan produksi malam itu saja lebih dari dua kali lipat anggaran yang ia butuhkan untuk memasang sensor IoT di seluruh lini produksinya.
+Akibatnya, downtime masih sering bersifat reaktif. Keputusan masih menunggu laporan manual. Dan biaya yang seharusnya bisa dicegah terus berulang setiap tahun.
 
-Ini bukan cerita yang langka. Ini pola yang berulang di ratusan fasilitas manufaktur Indonesia setiap tahun.
-
-Dan di sinilah saya ingin mulai — bukan dengan angka pasar atau proyeksi pertumbuhan, tapi dengan pertanyaan yang sesungguhnya relevan: **apa yang sebenarnya bisa IoT lakukan untuk manufaktur Indonesia hari ini, dan bagaimana cara memulainya dengan benar?**
+**IoT di manufaktur pada dasarnya menjawab satu pertanyaan: bagaimana mengubah data yang sudah ada menjadi visibilitas yang bisa menggerakkan tindakan lebih cepat?**
 
 ---
 
