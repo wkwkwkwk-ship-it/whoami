@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="google-site-verification" content="uPJ6yazwKAXbBa8DgRbTf8AvTi1s_hQ2UcHo0J3pCoA" />
   <!-- Google Analytics -->
-  <script src="/analytics.js"></script>
+  <script src="/analytics.js" defer></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Blog Muhamad Randi Ritvaldi — Esai tentang kewirausahaan, AI, IoT, dan kepemimpinan dari Founder &amp; CEO Synapsis.Id." />
   <meta name="theme-color" content="#0c0c0d" media="(prefers-color-scheme: dark)" />
@@ -47,6 +47,20 @@
       "url": "https://ritvaldi.my.id"
     },
     "blogPost": [
+      {
+        "@type": "BlogPosting",
+        "headline": "7 Kriteria Memilih Platform IoT Industrial di Indonesia (dan Kesalahan yang Paling Sering Terjadi)",
+        "url": "https://ritvaldi.my.id/blog/platform-monitoring-iot-industri-indonesia-panduan-memilih",
+        "datePublished": "2026-04-17",
+        "image": "https://ritvaldi.my.id/images/blog/platform-monitoring-iot-industri-indonesia-nearon.jpg"
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Masa Depan AI di 5 Industri Indonesia: Dari Pabrik hingga Rumah Sakit",
+        "url": "https://ritvaldi.my.id/blog/masa-depan-ai-5-industri-indonesia-manufaktur-mining-energi-smart-city-healthcare",
+        "datePublished": "2026-04-17",
+        "image": "https://ritvaldi.my.id/images/blog/ai-5-industri-indonesia-masa-depan-manufaktur-mining-energi.jpg"
+      },
       {
         "@type": "BlogPosting",
         "headline": "Fokus pada Yang Bisa Dikontrol: Cara Memimpin di Tengah Ketidakpastian",
@@ -587,8 +601,7 @@ button:focus-visible, a:focus-visible { border-radius: var(--radius); }
   .lang-btn { font-size: 0.68rem; }
 }
 </style>
-  <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link rel="stylesheet" href="style.css" /></noscript>
+  <link rel="stylesheet" href="style.css" />
   <link rel="alternate" type="application/rss+xml" title="Blog — Muhamad Randi Ritvaldi" href="https://ritvaldi.my.id/feed.xml" />
   <style>
 /* ── Floating Newsletter Subscribe Widget ── */
@@ -733,6 +746,42 @@ button:focus-visible, a:focus-visible { border-radius: var(--radius); }
   <div class="blog-posts-section">
     <div class="container">
       <div class="blog-list">
+
+        <!-- Artikel 21 -->
+        <article class="blog-list-item reveal" data-category="Tech Leadership">
+          <div class="blog-list-meta">
+            <span class="blog-cat">Tech Leadership</span>
+            <span class="blog-list-date">April 2026</span>
+            <span class="blog-list-read">8 menit baca</span>
+          </div>
+          <div class="blog-list-body">
+            <h2 class="blog-list-title">
+              <a href="/blog/platform-monitoring-iot-industri-indonesia-panduan-memilih" style="text-decoration:none; color:inherit;">
+                7 Kriteria Memilih Platform IoT Industrial di Indonesia (dan Kesalahan yang Paling Sering Terjadi)
+              </a>
+            </h2>
+            <p class="blog-list-synopsis">Bukan soal fitur terbanyak atau harga termurah — memilih platform monitoring IoT untuk industri Indonesia butuh kerangka yang tepat. Tujuh kriteria teknis dan bisnis yang wajib Anda evaluasi sebelum commit ke vendor mana pun.</p>
+            <a href="/blog/platform-monitoring-iot-industri-indonesia-panduan-memilih" class="blog-read-link">Baca artikel →</a>
+          </div>
+        </article>
+
+        <!-- Artikel 20 -->
+        <article class="blog-list-item reveal" data-category="Tech Leadership">
+          <div class="blog-list-meta">
+            <span class="blog-cat">Tech Leadership</span>
+            <span class="blog-list-date">April 2026</span>
+            <span class="blog-list-read">9 menit baca</span>
+          </div>
+          <div class="blog-list-body">
+            <h2 class="blog-list-title">
+              <a href="/blog/masa-depan-ai-5-industri-indonesia-manufaktur-mining-energi-smart-city-healthcare" style="text-decoration:none; color:inherit;">
+                Masa Depan AI di 5 Industri Indonesia: Dari Pabrik hingga Rumah Sakit
+              </a>
+            </h2>
+            <p class="blog-list-synopsis">Manufaktur, pertambangan, energi, smart city, dan healthcare — lima sektor yang sedang diubah oleh AI bukan sekadar janji. Ini adalah peta transformasi nyata yang sudah berjalan di Indonesia, dan peluang yang belum terisi.</p>
+            <a href="/blog/masa-depan-ai-5-industri-indonesia-manufaktur-mining-energi-smart-city-healthcare" class="blog-read-link">Baca artikel →</a>
+          </div>
+        </article>
 
         <!-- Artikel 19 -->
         <article class="blog-list-item reveal" data-category="Self-Leadership">
@@ -1089,7 +1138,7 @@ button:focus-visible, a:focus-visible { border-radius: var(--radius); }
         <a href="https://www.linkedin.com/in/randi-ritvaldi/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="/">Home</a>
         <a href="https://synapsis.id" target="_blank" rel="noopener noreferrer">Synapsis.Id</a>
-        <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'}); return false;" data-i18n="footer.top">↑ Top</a>
+        <a href="#" data-i18n="footer.top">↑ Top</a>
       </div>
     </div>
   </footer>
@@ -1137,30 +1186,6 @@ button:focus-visible, a:focus-visible { border-radius: var(--radius); }
 .blog-filter-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
 .blog-list-item.hidden { display: none; }
 </style>
-<script>
-(function () {
-  var buttons = document.querySelectorAll('.blog-filter-btn');
-  var articles = document.querySelectorAll('.blog-list-item[data-category]');
-  buttons.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      buttons.forEach(function (b) { b.classList.remove('active'); });
-      btn.classList.add('active');
-      var filter = btn.getAttribute('data-filter');
-      articles.forEach(function (art) {
-        if (filter === 'all') {
-          art.classList.remove('hidden');
-        } else {
-          var cat = art.getAttribute('data-category') || '';
-          if (cat === filter) {
-            art.classList.remove('hidden');
-          } else {
-            art.classList.add('hidden');
-          }
-        }
-      });
-    });
-  });
-})();
-</script>
+<script src="blog-filter.js" defer></script>
 </body>
 </html>
