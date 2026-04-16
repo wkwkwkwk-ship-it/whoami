@@ -1,0 +1,14 @@
+# Security Policy — ritvaldi.my.id
+# Compliant with RFC 9116 (https://www.rfc-editor.org/rfc/rfc9116)
+
+Contact: mailto:ritvaldi@synapsis.id
+Preferred-Languages: id, en
+Expires: 2027-04-16T00:00:00.000Z
+
+# If you discover a security vulnerability on this website, please report it
+# by sending an email to the address above. We appreciate responsible disclosure
+# and will acknowledge your report within 3 business days.
+
+# This is a personal branding / portfolio website.
+# There is no user authentication, no stored personal data beyond contact form
+# submissions (handled by Formspree), and no proprietary APIs exposed.

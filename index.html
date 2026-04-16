@@ -3,19 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="google-site-verification" content="uPJ6yazwKAXbBa8DgRbTf8AvTi1s_hQ2UcHo0J3pCoA" />
-  <!-- Google Analytics — deferred after page load -->
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-9BFT3PYG3D');
-    window.addEventListener('load', function() {
-      var s = document.createElement('script');
-      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-9BFT3PYG3D';
-      s.async = true;
-      document.head.appendChild(s);
-    });
-  </script>
+  <!-- Google Analytics -->
+  <script src="/analytics.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Muhamad Randi Ritvaldi — Founder & CEO of Synapsis.Id, Indonesia's leading IoT solutions provider. Engineer, AI enthusiast, Microsoft Imagine Cup World Finalist, and international writer based in Jakarta." />
   <meta name="theme-color" content="#0c0c0d" media="(prefers-color-scheme: dark)" />
@@ -1346,18 +1335,25 @@ button:focus-visible, a:focus-visible { border-radius: var(--radius); }
         </div>
         <div class="contact-right reveal">
           <form id="contact-form">
+            <!-- Honeypot: hidden from real users, filled by bots — Formspree ignores submissions with _gotcha -->
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none!important;position:absolute;left:-9999px;" />
             <div class="field-group">
               <label for="fname" data-i18n="form.name.label">Name</label>
-              <input type="text" id="fname" name="name" data-i18n-placeholder="form.name.ph" placeholder="Your full name" required />
+              <input type="text" id="fname" name="name" maxlength="120" data-i18n-placeholder="form.name.ph" placeholder="Your full name" required />
             </div>
             <div class="field-group">
               <label for="femail" data-i18n="form.email.label">Email</label>
-              <input type="email" id="femail" name="email" data-i18n-placeholder="form.email.ph" placeholder="your@email.com" required />
+              <input type="email" id="femail" name="email" maxlength="254" data-i18n-placeholder="form.email.ph" placeholder="your@email.com" required />
             </div>
             <div class="field-group">
               <label for="fmessage" data-i18n="form.msg.label">Message</label>
-              <textarea id="fmessage" name="message" rows="5" data-i18n-placeholder="form.msg.ph" placeholder="What would you like to discuss?" required></textarea>
+              <textarea id="fmessage" name="message" rows="5" maxlength="3000" data-i18n-placeholder="form.msg.ph" placeholder="What would you like to discuss?" required></textarea>
             </div>
+            <!-- Cloudflare Turnstile CAPTCHA widget
+                 Replace YOUR_TURNSTILE_SITE_KEY with your real site key from:
+                 https://dash.cloudflare.com → Turnstile → Add Site
+                 Also set TURNSTILE_SECRET_KEY env var in Vercel dashboard. -->
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAAC-fGYWrZ0wYB6pd" data-theme="auto" data-size="flexible"></div>
             <button type="submit" class="btn-submit">
               <span data-i18n="form.submit">Send Message</span>
               <span class="btn-arrow">→</span>
@@ -1385,6 +1381,8 @@ button:focus-visible, a:focus-visible { border-radius: var(--radius); }
   </footer>
 
   <script src="main.js" defer></script>
-  <script async src="//www.instagram.com/embed.js"></script>
+  <script async src="https://www.instagram.com/embed.js"></script>
+  <!-- Cloudflare Turnstile — loads only after site key is configured -->
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </body>
 </html>

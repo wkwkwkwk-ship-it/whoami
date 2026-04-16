@@ -1,7 +1,10 @@
 User-agent: *
 Allow: /
 Disallow: /.claude/
+Disallow: /.git/
+Disallow: /node_modules/
 Disallow: /article/*.md
 Disallow: /article/*.exe
+Disallow: /CATATAN.md
 
 Sitemap: https://ritvaldi.my.id/sitemap.xml

@@ -1,0 +1,130 @@
+name: Security & Hygiene CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  hygiene:
+    name: Security Hygiene Checks
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # ── 1. Required security files ────────────────────────────────────────
+      - name: security.txt present
+        run: |
+          test -f .well-known/security.txt \
+            || { echo "FAIL: .well-known/security.txt is missing"; exit 1; }
+          echo "OK: security.txt exists"
+
+      - name: analytics.js present
+        run: |
+          test -f analytics.js \
+            || { echo "FAIL: analytics.js is missing"; exit 1; }
+          echo "OK: analytics.js exists"
+
+      - name: API contact function present
+        run: |
+          test -f api/contact.js \
+            || { echo "FAIL: api/contact.js is missing"; exit 1; }
+          echo "OK: api/contact.js exists"
+
+      # ── 2. No inline GA4 in HTML ──────────────────────────────────────────
+      - name: No inline GA4 scripts in HTML
+        run: |
+          if grep -rl "window\.dataLayer\s*=" --include="*.html" .; then
+            echo "FAIL: Inline GA4 found — should use /analytics.js instead"
+            exit 1
+          fi
+          echo "OK: No inline GA4 in HTML files"
+
+      # ── 3. External link safety ───────────────────────────────────────────
+      - name: All target=_blank links have rel=noopener
+        run: |
+          BAD=$(grep -rn 'target="_blank"' --include="*.html" . \
+            | grep -v 'rel="noopener' \
+            | grep -v 'node_modules' || true)
+          if [ -n "$BAD" ]; then
+            echo "FAIL: target=_blank without rel=noopener:"
+            echo "$BAD"
+            exit 1
+          fi
+          echo "OK: All target=_blank links have rel=noopener"
+
+      # ── 4. No protocol-relative URLs ─────────────────────────────────────
+      - name: No protocol-relative external URLs (src=// or href=//)
+        run: |
+          BAD=$(grep -rn 'src="//' --include="*.html" . \
+            | grep -v 'node_modules' || true)
+          if [ -n "$BAD" ]; then
+            echo "FAIL: Protocol-relative src= found:"
+            echo "$BAD"
+            exit 1
+          fi
+          echo "OK: No protocol-relative src= URLs"
+
+      # ── 5. vercel.json has headers ────────────────────────────────────────
+      - name: vercel.json defines security headers
+        run: |
+          python3 -c "
+          import json, sys
+          v = json.load(open('vercel.json'))
+          if 'headers' not in v:
+              print('FAIL: No headers block in vercel.json')
+              sys.exit(1)
+          csp = next((h['value'] for block in v['headers'] for h in block['headers'] if h['key'] == 'Content-Security-Policy'), None)
+          if not csp:
+              print('FAIL: No Content-Security-Policy header found')
+              sys.exit(1)
+          for directive in ['default-src', 'script-src', 'frame-ancestors', 'object-src']:
+              if directive not in csp:
+                  print(f'FAIL: CSP missing directive: {directive}')
+                  sys.exit(1)
+          print('OK: vercel.json headers present and CSP looks complete')
+          "
+
+      # ── 6. Turnstile placeholder not forgotten ────────────────────────────
+      - name: Turnstile site key configured (must not be placeholder)
+        run: |
+          if grep -r "YOUR_TURNSTILE_SITE_KEY" --include="*.html" . > /dev/null 2>&1; then
+            echo "FAIL: Turnstile site key is still a placeholder."
+            echo "      Replace YOUR_TURNSTILE_SITE_KEY in index.html with a real Cloudflare key."
+            exit 1
+          fi
+          echo "OK: Turnstile site key is configured"
+
+      # ── 7. Newsletter form ID configured (warn if still placeholder) ──────
+      - name: Newsletter form ID configured (warn if still placeholder)
+        run: |
+          if grep -r "YOUR_NEWSLETTER_FORM_ID" --include="*.js" . > /dev/null 2>&1; then
+            echo "WARN: Newsletter form ID is still a placeholder in main.js."
+            echo "      Create a Formspree form and replace YOUR_NEWSLETTER_FORM_ID."
+          else
+            echo "OK: Newsletter form ID appears to be configured"
+          fi
+
+      # ── 8. No obvious hardcoded secrets ──────────────────────────────────
+      - name: No obvious hardcoded secrets
+        run: |
+          # Check for patterns that look like real secrets (not placeholders)
+          BAD=$(grep -rEn "(secret|password|api.?key)\s*[:=]\s*['\"][a-zA-Z0-9_\-]{16,}['\"]" \
+            --include="*.js" --include="*.html" --include="*.json" \
+            --exclude-dir=node_modules \
+            --exclude-dir=.git \
+            . 2>/dev/null \
+            | grep -v "YOUR_" \
+            | grep -v "TURNSTILE_SECRET_KEY" \
+            | grep -v "formspree" \
+            | grep -v "package-lock" || true)
+          if [ -n "$BAD" ]; then
+            echo "WARN: Possible hardcoded secret detected:"
+            echo "$BAD"
+            # Warn only — do not fail (could be false positive)
+          else
+            echo "OK: No obvious hardcoded secrets found"
+          fi
