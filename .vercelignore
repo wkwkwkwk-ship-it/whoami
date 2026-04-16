@@ -1,0 +1,10 @@
+# Files excluded from Vercel deployment (not served publicly)
+.claude/
+.env
+.env.*
+!.env.example
+CATATAN.md
+article/
+docs/
+node_modules/
+.git/
