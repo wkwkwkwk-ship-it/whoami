@@ -590,6 +590,79 @@ button:focus-visible, a:focus-visible { border-radius: var(--radius); }
   <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link rel="stylesheet" href="style.css" /></noscript>
   <link rel="alternate" type="application/rss+xml" title="Blog — Muhamad Randi Ritvaldi" href="https://ritvaldi.my.id/feed.xml" />
+  <style>
+/* ── Floating Newsletter Subscribe Widget ── */
+.float-sub-wrap { position: fixed; bottom: 28px; right: 24px; z-index: 150; }
+
+.float-sub-btn {
+  display: flex; align-items: center; gap: 8px;
+  background: var(--accent); color: #000;
+  border: none; border-radius: 100px;
+  padding: 10px 18px; font-size: 0.8rem; font-weight: 700;
+  cursor: pointer; box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  transition: opacity 0.2s, transform 0.2s; font-family: var(--font);
+  letter-spacing: 0.02em;
+}
+.float-sub-btn:hover { opacity: 0.88; transform: translateY(-2px); }
+.float-sub-btn.subscribed { background: var(--bg-card); color: var(--accent); border: 1px solid var(--border); }
+
+.float-sub-popup {
+  display: none; position: absolute; bottom: calc(100% + 12px); right: 0;
+  width: 300px; background: var(--bg-card); border: 1px solid var(--border);
+  border-top: 2px solid var(--accent); border-radius: var(--radius-lg);
+  padding: 20px; box-shadow: var(--shadow);
+  animation: subPopIn 0.2s cubic-bezier(0.4,0,0.2,1);
+}
+.float-sub-popup.open { display: block; }
+@keyframes subPopIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+
+.float-sub-close {
+  position: absolute; top: 12px; right: 12px;
+  background: none; border: none; cursor: pointer;
+  color: var(--text-muted); padding: 4px; border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+  transition: color 0.2s;
+}
+.float-sub-close:hover { color: var(--text); }
+
+.float-sub-title {
+  font-size: 0.9rem; font-weight: 700; color: var(--text);
+  margin: 0 0 6px; padding-right: 20px; line-height: 1.4;
+}
+.float-sub-desc {
+  font-size: 0.75rem; color: var(--text-muted); margin: 0 0 14px; line-height: 1.6;
+}
+
+.float-sub-field { display: flex; gap: 6px; }
+.float-sub-field input[type="email"] {
+  flex: 1; min-width: 0;
+  background: var(--bg); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 8px 10px;
+  font-size: 0.8rem; color: var(--text); font-family: var(--font);
+  transition: border-color 0.2s;
+}
+.float-sub-field input[type="email"]:focus { outline: none; border-color: var(--accent); }
+.float-sub-field input[type="email"]::placeholder { color: var(--text-muted); }
+
+.btn-subscribe {
+  background: var(--accent); color: #000;
+  border: none; border-radius: var(--radius);
+  padding: 8px 14px; font-size: 0.78rem; font-weight: 700;
+  cursor: pointer; white-space: nowrap; font-family: var(--font);
+  transition: opacity 0.2s;
+}
+.btn-subscribe:hover { opacity: 0.85; }
+.btn-subscribe:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.subscribe-msg { font-size: 0.75rem; margin: 8px 0 0; min-height: 1em; }
+.sub-success { color: #4caf87; }
+.sub-error   { color: #e05c5c; }
+
+@media (max-width: 600px) {
+  .float-sub-wrap { bottom: 16px; right: 16px; }
+  .float-sub-popup { width: calc(100vw - 32px); right: 0; }
+}
+  </style>
 </head>
 <body>
 
@@ -1044,83 +1117,6 @@ button:focus-visible, a:focus-visible { border-radius: var(--radius); }
     <p id="subscribe-msg" class="subscribe-msg" aria-live="polite"></p>
   </div>
 </div>
-
-<style>
-.float-sub-wrap { position: fixed; bottom: 28px; right: 24px; z-index: 150; }
-
-.float-sub-btn {
-  display: flex; align-items: center; gap: 8px;
-  background: var(--accent); color: #000;
-  border: none; border-radius: 100px;
-  padding: 10px 18px; font-size: 0.8rem; font-weight: 700;
-  cursor: pointer; box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-  transition: opacity 0.2s, transform 0.2s; font-family: var(--font);
-  letter-spacing: 0.02em;
-}
-.float-sub-btn:hover { opacity: 0.88; transform: translateY(-2px); }
-.float-sub-btn.subscribed { background: var(--bg-card); color: var(--accent); border: 1px solid var(--border); }
-
-.float-sub-popup {
-  display: none; position: absolute; bottom: calc(100% + 12px); right: 0;
-  width: 300px; background: var(--bg-card); border: 1px solid var(--border);
-  border-top: 2px solid var(--accent); border-radius: var(--radius-lg);
-  padding: 20px; box-shadow: var(--shadow);
-  animation: subPopIn 0.2s cubic-bezier(0.4,0,0.2,1);
-}
-.float-sub-popup.open { display: block; }
-@keyframes subPopIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
-
-.float-sub-close {
-  position: absolute; top: 12px; right: 12px;
-  background: none; border: none; cursor: pointer;
-  color: var(--text-muted); padding: 4px; border-radius: 4px;
-  display: flex; align-items: center; justify-content: center;
-  transition: color 0.2s;
-}
-.float-sub-close:hover { color: var(--text); }
-
-.float-sub-title {
-  font-size: 0.9rem; font-weight: 700; color: var(--text);
-  margin: 0 0 6px; padding-right: 20px; line-height: 1.4;
-}
-.float-sub-desc {
-  font-size: 0.75rem; color: var(--text-muted); margin: 0 0 14px; line-height: 1.6;
-}
-
-.float-sub-field { display: flex; gap: 6px; }
-.float-sub-field input[type="email"] {
-  flex: 1; min-width: 0;
-  background: var(--bg); border: 1px solid var(--border);
-  border-radius: var(--radius); padding: 8px 10px;
-  font-size: 0.8rem; color: var(--text); font-family: var(--font);
-  transition: border-color 0.2s;
-}
-.float-sub-field input[type="email"]:focus {
-  outline: none; border-color: var(--accent);
-}
-.float-sub-field input[type="email"]::placeholder { color: var(--text-muted); }
-
-.btn-subscribe {
-  background: var(--accent); color: #000;
-  border: none; border-radius: var(--radius);
-  padding: 8px 14px; font-size: 0.78rem; font-weight: 700;
-  cursor: pointer; white-space: nowrap; font-family: var(--font);
-  transition: opacity 0.2s;
-}
-.btn-subscribe:hover { opacity: 0.85; }
-.btn-subscribe:disabled { opacity: 0.6; cursor: not-allowed; }
-
-.subscribe-msg {
-  font-size: 0.75rem; margin: 8px 0 0; min-height: 1em;
-}
-.sub-success { color: #4caf87; }
-.sub-error   { color: #e05c5c; }
-
-@media (max-width: 600px) {
-  .float-sub-wrap { bottom: 16px; right: 16px; }
-  .float-sub-popup { width: calc(100vw - 32px); right: 0; }
-}
-</style>
 
 <script src="main.js" defer></script>
 <style>
