@@ -1348,10 +1348,7 @@ button:focus-visible, a:focus-visible { border-radius: var(--radius); }
               <label for="fmessage" data-i18n="form.msg.label">Message</label>
               <textarea id="fmessage" name="message" rows="5" maxlength="3000" data-i18n-placeholder="form.msg.ph" placeholder="What would you like to discuss?" required></textarea>
             </div>
-            <!-- Cloudflare Turnstile CAPTCHA widget
-                 Replace YOUR_TURNSTILE_SITE_KEY with your real site key from:
-                 https://dash.cloudflare.com → Turnstile → Add Site
-                 Also set TURNSTILE_SECRET_KEY env var in Vercel dashboard. -->
+            <!-- Cloudflare Turnstile CAPTCHA widget -->
             <div class="cf-turnstile" data-sitekey="0x4AAAAAAC-fGYWrZ0wYB6pd" data-theme="auto" data-size="flexible" style="margin:4px 0 16px;"></div>
             <button type="submit" class="btn-submit">
               <span data-i18n="form.submit">Send Message</span>
