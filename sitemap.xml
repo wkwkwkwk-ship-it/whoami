@@ -168,4 +168,22 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+  <url>
+    <loc>https://ritvaldi.my.id/blog/dari-data-ke-keputusan-cara-ai-bekerja-operasional-industri</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ritvaldi.my.id/blog/pelajaran-bisnis-dari-lapangan-golf-kepemimpinan</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ritvaldi.my.id/blog/biaya-risiko-transisi-implementasi-iot-ai-industri-cara-mitigasi</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>
