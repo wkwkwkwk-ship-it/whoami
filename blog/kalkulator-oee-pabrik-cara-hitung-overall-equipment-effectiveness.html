@@ -378,7 +378,6 @@ button:focus-visible, a:focus-visible { border-radius: var(--radius); }
 .oee-inputs { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 1.75rem; }
 .oee-input-group { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.1rem; }
 .oee-input-group h4 { font-size: 0.66rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.13em; color: var(--accent); margin-bottom: 0.9rem; }
-/* Slider field */
 .oee-sf { margin-bottom: 1rem; }
 .oee-sf:last-child { margin-bottom: 0; }
 .oee-sf-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 5px; }
@@ -386,13 +385,11 @@ button:focus-visible, a:focus-visible { border-radius: var(--radius); }
 .oee-sf-num { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; color: var(--text); font-family: var(--font); font-size: 0.82rem; font-weight: 700; padding: 3px 7px; width: 78px; text-align: right; outline: none; flex-shrink: 0; -moz-appearance: textfield; transition: border-color 0.2s; }
 .oee-sf-num:focus { border-color: var(--accent); }
 .oee-sf-num::-webkit-outer-spin-button, .oee-sf-num::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
-/* Range slider */
-input[type=range].oee-range { -webkit-appearance: none; appearance: none; width: 100%; height: 4px; border-radius: 2px; outline: none; cursor: pointer; border: none; padding: 0; }
+input[type=range].oee-range { -webkit-appearance: none; appearance: none; width: 100%; height: 4px; border-radius: 2px; background: var(--border); outline: none; cursor: pointer; border: none; padding: 0; }
 input[type=range].oee-range::-webkit-slider-thumb { -webkit-appearance: none; width: 17px; height: 17px; border-radius: 50%; background: var(--accent); cursor: pointer; border: 2.5px solid var(--bg-card); box-shadow: 0 1px 4px rgba(0,0,0,0.45); transition: transform 0.15s; }
 input[type=range].oee-range:active::-webkit-slider-thumb, input[type=range].oee-range:hover::-webkit-slider-thumb { transform: scale(1.18); }
 input[type=range].oee-range::-moz-range-thumb { width: 17px; height: 17px; border-radius: 50%; background: var(--accent); cursor: pointer; border: 2.5px solid var(--bg-card); box-shadow: 0 1px 4px rgba(0,0,0,0.45); }
-input[type=range].oee-range::-moz-range-track { height: 4px; border-radius: 2px; background: var(--border-hover); }
-/* Results */
+input[type=range].oee-range::-moz-range-track { height: 4px; border-radius: 2px; background: var(--border); }
 .oee-results { border-top: 1px solid var(--border); padding-top: 1.5rem; }
 .oee-metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin-bottom: 1.25rem; }
 .oee-metric { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 0.85rem 0.6rem; text-align: center; }
@@ -433,7 +430,7 @@ input[type=range].oee-range::-moz-range-track { height: 4px; border-radius: 2px;
 }
           </style>
 
-          <div class="oee-calc" id="oeeCalc">
+          <div class="oee-calc" id="oee-widget">
             <div class="oee-calc-header">
               <h3>Kalkulator OEE</h3>
               <p>Geser slider atau ketik langsung — skor OEE dan estimasi revenue hilang dihitung otomatis.</p>
@@ -445,17 +442,21 @@ input[type=range].oee-range::-moz-range-track { height: 4px; border-radius: 2px;
                 <h4>Availability</h4>
                 <div class="oee-sf">
                   <div class="oee-sf-top">
-                    <label class="oee-sf-label" for="oee-planned">Waktu terencana (jam/shift)</label>
-                    <input type="number" class="oee-sf-num" id="oee-planned" value="8" min="0.5" max="24" step="0.5" />
+                    <label class="oee-sf-label" for="n-planned">Waktu terencana (jam/shift)</label>
+                    <input type="number" class="oee-sf-num" id="n-planned" value="8" min="0.5" max="24" step="0.5"
+                      oninput="document.getElementById('r-planned').value=this.value;oeeSlider('r-planned');oeeCalc()">
                   </div>
-                  <input type="range" class="oee-range" id="oee-planned-r" value="8" min="0.5" max="24" step="0.5" />
+                  <input type="range" class="oee-range" id="r-planned" value="8" min="0.5" max="24" step="0.5"
+                    oninput="document.getElementById('n-planned').value=this.value;oeeSlider(this);oeeCalc()">
                 </div>
                 <div class="oee-sf">
                   <div class="oee-sf-top">
-                    <label class="oee-sf-label" for="oee-downtime">Total downtime (jam/shift)</label>
-                    <input type="number" class="oee-sf-num" id="oee-downtime" value="1" min="0" max="24" step="0.5" />
+                    <label class="oee-sf-label" for="n-downtime">Total downtime (jam/shift)</label>
+                    <input type="number" class="oee-sf-num" id="n-downtime" value="1" min="0" max="24" step="0.5"
+                      oninput="document.getElementById('r-downtime').value=this.value;oeeSlider('r-downtime');oeeCalc()">
                   </div>
-                  <input type="range" class="oee-range" id="oee-downtime-r" value="1" min="0" max="24" step="0.5" />
+                  <input type="range" class="oee-range" id="r-downtime" value="1" min="0" max="24" step="0.5"
+                    oninput="document.getElementById('n-downtime').value=this.value;oeeSlider(this);oeeCalc()">
                 </div>
               </div>
 
@@ -464,17 +465,21 @@ input[type=range].oee-range::-moz-range-track { height: 4px; border-radius: 2px;
                 <h4>Performance</h4>
                 <div class="oee-sf">
                   <div class="oee-sf-top">
-                    <label class="oee-sf-label" for="oee-ideal-speed">Kecepatan ideal mesin (unit/jam)</label>
-                    <input type="number" class="oee-sf-num" id="oee-ideal-speed" value="100" min="10" max="1000" step="10" />
+                    <label class="oee-sf-label" for="n-ideal">Kecepatan ideal mesin (unit/jam)</label>
+                    <input type="number" class="oee-sf-num" id="n-ideal" value="100" min="10" max="1000" step="10"
+                      oninput="document.getElementById('r-ideal').value=this.value;oeeSlider('r-ideal');oeeCalc()">
                   </div>
-                  <input type="range" class="oee-range" id="oee-ideal-speed-r" value="100" min="10" max="1000" step="10" />
+                  <input type="range" class="oee-range" id="r-ideal" value="100" min="10" max="1000" step="10"
+                    oninput="document.getElementById('n-ideal').value=this.value;oeeSlider(this);oeeCalc()">
                 </div>
                 <div class="oee-sf">
                   <div class="oee-sf-top">
-                    <label class="oee-sf-label" for="oee-total-output">Total output aktual (unit/shift)</label>
-                    <input type="number" class="oee-sf-num" id="oee-total-output" value="595" min="0" max="10000" step="5" />
+                    <label class="oee-sf-label" for="n-output">Total output aktual (unit/shift)</label>
+                    <input type="number" class="oee-sf-num" id="n-output" value="595" min="0" max="10000" step="5"
+                      oninput="document.getElementById('r-output').value=this.value;oeeSlider('r-output');oeeCalc()">
                   </div>
-                  <input type="range" class="oee-range" id="oee-total-output-r" value="595" min="0" max="10000" step="5" />
+                  <input type="range" class="oee-range" id="r-output" value="595" min="0" max="10000" step="5"
+                    oninput="document.getElementById('n-output').value=this.value;oeeSlider(this);oeeCalc()">
                 </div>
               </div>
 
@@ -483,10 +488,12 @@ input[type=range].oee-range::-moz-range-track { height: 4px; border-radius: 2px;
                 <h4>Quality</h4>
                 <div class="oee-sf">
                   <div class="oee-sf-top">
-                    <label class="oee-sf-label" for="oee-rejects">Unit reject / cacat (unit/shift)</label>
-                    <input type="number" class="oee-sf-num" id="oee-rejects" value="12" min="0" max="1000" step="1" />
+                    <label class="oee-sf-label" for="n-rejects">Unit reject / cacat (unit/shift)</label>
+                    <input type="number" class="oee-sf-num" id="n-rejects" value="12" min="0" max="1000" step="1"
+                      oninput="document.getElementById('r-rejects').value=this.value;oeeSlider('r-rejects');oeeCalc()">
                   </div>
-                  <input type="range" class="oee-range" id="oee-rejects-r" value="12" min="0" max="1000" step="1" />
+                  <input type="range" class="oee-range" id="r-rejects" value="12" min="0" max="1000" step="1"
+                    oninput="document.getElementById('n-rejects').value=this.value;oeeSlider(this);oeeCalc()">
                 </div>
               </div>
 
@@ -495,17 +502,21 @@ input[type=range].oee-range::-moz-range-track { height: 4px; border-radius: 2px;
                 <h4>Konteks Revenue</h4>
                 <div class="oee-sf">
                   <div class="oee-sf-top">
-                    <label class="oee-sf-label" for="oee-price">Harga jual per unit (Rp)</label>
-                    <input type="number" class="oee-sf-num" id="oee-price" value="50000" min="0" max="2000000" step="5000" />
+                    <label class="oee-sf-label" for="n-price">Harga jual per unit (Rp)</label>
+                    <input type="number" class="oee-sf-num" id="n-price" value="50000" min="0" max="2000000" step="5000"
+                      oninput="document.getElementById('r-price').value=this.value;oeeSlider('r-price');oeeCalc()">
                   </div>
-                  <input type="range" class="oee-range" id="oee-price-r" value="50000" min="0" max="2000000" step="5000" />
+                  <input type="range" class="oee-range" id="r-price" value="50000" min="0" max="2000000" step="5000"
+                    oninput="document.getElementById('n-price').value=this.value;oeeSlider(this);oeeCalc()">
                 </div>
                 <div class="oee-sf">
                   <div class="oee-sf-top">
-                    <label class="oee-sf-label" for="oee-shifts">Shift produksi per hari</label>
-                    <input type="number" class="oee-sf-num" id="oee-shifts" value="2" min="1" max="3" step="1" />
+                    <label class="oee-sf-label" for="n-shifts">Shift produksi per hari</label>
+                    <input type="number" class="oee-sf-num" id="n-shifts" value="2" min="1" max="3" step="1"
+                      oninput="document.getElementById('r-shifts').value=this.value;oeeSlider('r-shifts');oeeCalc()">
                   </div>
-                  <input type="range" class="oee-range" id="oee-shifts-r" value="2" min="1" max="3" step="1" />
+                  <input type="range" class="oee-range" id="r-shifts" value="2" min="1" max="3" step="1"
+                    oninput="document.getElementById('n-shifts').value=this.value;oeeSlider(this);oeeCalc()">
                 </div>
               </div>
             </div>
@@ -529,7 +540,6 @@ input[type=range].oee-range::-moz-range-track { height: 4px; border-radius: 2px;
 
               <div class="oee-score-block">
                 <div class="oee-gauge-wrap" aria-hidden="true">
-                  <!-- Semi-circle gauge: M 15 95 A 80 80 0 0 0 185 95, sweep=0 = CCW = top arc -->
                   <svg viewBox="0 0 200 108" class="oee-gauge-svg">
                     <path class="oee-gauge-arc-bg"
                       d="M 20 100 A 80 80 0 0 0 180 100"
@@ -538,16 +548,11 @@ input[type=range].oee-range::-moz-range-track { height: 4px; border-radius: 2px;
                       d="M 20 100 A 80 80 0 0 0 180 100"
                       fill="none" stroke="#c9a96e" stroke-width="13" stroke-linecap="round"
                       stroke-dasharray="0 252"/>
-                    <!-- World-class marker at 85% ≈ 213.6 / 251.3 along the arc -->
-                    <!-- Position at angle: start=180°, going CCW to 0°; 85% = 27° from right -->
-                    <!-- (100 + 80*cos(27°), 100 - 80*sin(27°)) ≈ (171, 64) -->
                     <line x1="168" y1="58" x2="175" y2="68" stroke="var(--text-muted)" stroke-width="1.5" stroke-linecap="round"/>
                     <text x="155" y="52" text-anchor="middle" font-size="7.5" fill="var(--text-muted)" font-family="Inter,sans-serif">85%</text>
                     <text x="155" y="60" text-anchor="middle" font-size="6.5" fill="var(--text-muted)" font-family="Inter,sans-serif">WC</text>
-                    <!-- Scale labels -->
                     <text x="12" y="108" text-anchor="middle" font-size="8" fill="var(--text-muted)" font-family="Inter,sans-serif">0</text>
                     <text x="188" y="108" text-anchor="middle" font-size="8" fill="var(--text-muted)" font-family="Inter,sans-serif">100%</text>
-                    <!-- OEE value -->
                     <text id="gauge-val" x="100" y="80" text-anchor="middle"
                       font-size="30" font-weight="700" fill="#c9a96e"
                       font-family="Inter,sans-serif">—</text>
@@ -582,55 +587,38 @@ input[type=range].oee-range::-moz-range-track { height: 4px; border-radius: 2px;
           </div>
 
           <script>
-(function () {
-  var ARC = Math.PI * 80; // ≈ 251.3
+function oeeSlider(el) {
+  if (typeof el === 'string') el = document.getElementById(el);
+  if (!el) return;
+  var min = parseFloat(el.min) || 0;
+  var max = parseFloat(el.max) || 100;
+  var pct = max > min ? ((parseFloat(el.value) - min) / (max - min)) * 100 : 0;
+  var cs  = getComputedStyle(document.documentElement);
+  var accent = cs.getPropertyValue('--accent').trim() || '#c9a96e';
+  var track  = cs.getPropertyValue('--border').trim()  || '#222224';
+  el.style.background = 'linear-gradient(to right,' + accent + ' ' + pct + '%,' + track + ' ' + pct + '%)';
+}
 
-  // ── Slider fill track ──────────────────────────────
-  function getAccent() {
-    try { return getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || '#c9a96e'; }
-    catch (e) { return '#c9a96e'; }
-  }
-  function getBorderHover() {
-    try { return getComputedStyle(document.documentElement).getPropertyValue('--border-hover').trim() || '#333336'; }
-    catch (e) { return '#333336'; }
-  }
+function oeeCalc() {
+  var ARC      = Math.PI * 80;
+  var planned  = parseFloat(document.getElementById('n-planned').value)  || 0;
+  var downtime = parseFloat(document.getElementById('n-downtime').value) || 0;
+  var idealSpd = parseFloat(document.getElementById('n-ideal').value)    || 0;
+  var totalOut = parseFloat(document.getElementById('n-output').value)   || 0;
+  var rejects  = parseFloat(document.getElementById('n-rejects').value)  || 0;
+  var price    = parseFloat(document.getElementById('n-price').value)    || 0;
+  var shifts   = parseFloat(document.getElementById('n-shifts').value)   || 1;
 
-  function updateSliderBg(r) {
-    var min = parseFloat(r.min) || 0;
-    var max = parseFloat(r.max) || 100;
-    var val = parseFloat(r.value);
-    var pct = max > min ? ((val - min) / (max - min)) * 100 : 0;
-    r.style.background = 'linear-gradient(to right,' + getAccent() + ' ' + pct + '%,' + getBorderHover() + ' ' + pct + '%)';
-  }
+  if (planned <= 0 || idealSpd <= 0) return;
 
-  // ── Sync number ↔ range ────────────────────────────
-  function bindPair(numId, rangeId) {
-    var num = document.getElementById(numId);
-    var rng = document.getElementById(rangeId);
-    if (!num || !rng) return;
-    num.addEventListener('input', function () {
-      var v = parseFloat(this.value);
-      if (!isNaN(v)) { rng.value = Math.min(parseFloat(rng.max), Math.max(parseFloat(rng.min), v)); }
-      updateSliderBg(rng);
-      calc();
-    });
-    rng.addEventListener('input', function () {
-      num.value = this.value;
-      updateSliderBg(this);
-      calc();
-    });
-    updateSliderBg(rng);
-  }
+  var runTime = Math.max(0, planned - downtime);
+  var avail   = runTime / planned;
+  var perfMax = runTime * idealSpd;
+  var perf    = perfMax > 0 ? Math.min(1, totalOut / perfMax) : 0;
+  var goodOut = Math.max(0, totalOut - rejects);
+  var qual    = totalOut > 0 ? goodOut / totalOut : 1;
+  var oee     = avail * perf * qual;
 
-  function refreshAllSliders() {
-    ['oee-planned-r','oee-downtime-r','oee-ideal-speed-r',
-     'oee-total-output-r','oee-rejects-r','oee-price-r','oee-shifts-r'].forEach(function(id) {
-      var el = document.getElementById(id);
-      if (el) updateSliderBg(el);
-    });
-  }
-
-  // ── Formatters ─────────────────────────────────────
   function f1(n) { return n.toFixed(1) + '%'; }
   function fmtRp(n) {
     var abs = Math.abs(Math.round(n));
@@ -639,98 +627,62 @@ input[type=range].oee-range::-moz-range-track { height: 4px; border-radius: 2px;
     try { return 'Rp ' + Math.round(n).toLocaleString('id-ID'); }
     catch (e) { return 'Rp ' + Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.'); }
   }
-  function fmtUnits(n) {
+  function fmtU(n) {
     try { return Math.round(n).toLocaleString('id-ID') + ' unit'; }
     catch (e) { return Math.round(n) + ' unit'; }
   }
 
-  // ── Main calculation ───────────────────────────────
-  function calc() {
-    var planned  = parseFloat(document.getElementById('oee-planned').value)      || 0;
-    var downtime = parseFloat(document.getElementById('oee-downtime').value)     || 0;
-    var idealSpd = parseFloat(document.getElementById('oee-ideal-speed').value)  || 0;
-    var totalOut = parseFloat(document.getElementById('oee-total-output').value) || 0;
-    var rejects  = parseFloat(document.getElementById('oee-rejects').value)      || 0;
-    var price    = parseFloat(document.getElementById('oee-price').value)        || 0;
-    var shifts   = parseFloat(document.getElementById('oee-shifts').value)       || 1;
+  document.getElementById('res-avail').textContent = f1(avail * 100);
+  document.getElementById('res-perf').textContent  = f1(perf  * 100);
+  document.getElementById('res-qual').textContent  = f1(qual  * 100);
 
-    if (planned <= 0 || idealSpd <= 0) return;
+  var arc    = document.getElementById('gauge-arc');
+  var accent = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || '#c9a96e';
+  arc.setAttribute('stroke-dasharray', (oee * ARC).toFixed(1) + ' 252');
+  var gaugeColor = oee >= 0.85 ? '#22c55e' : oee >= 0.75 ? accent : oee >= 0.60 ? '#d4a017' : '#ef4444';
+  arc.style.stroke = gaugeColor;
+  var gVal = document.getElementById('gauge-val');
+  gVal.textContent = f1(oee * 100);
+  gVal.style.fill  = gaugeColor;
 
-    var runTime = Math.max(0, planned - downtime);
-    var avail   = runTime / planned;
-    var perfMax = runTime * idealSpd;
-    var perf    = perfMax > 0 ? Math.min(1, totalOut / perfMax) : 0;
-    var goodOut = Math.max(0, totalOut - rejects);
-    var qual    = totalOut > 0 ? goodOut / totalOut : 1;
-    var oee     = avail * perf * qual;
-
-    var accent = getAccent();
-
-    // Components
-    document.getElementById('res-avail').textContent = f1(avail * 100);
-    document.getElementById('res-perf').textContent  = f1(perf  * 100);
-    document.getElementById('res-qual').textContent  = f1(qual  * 100);
-
-    // Gauge
-    var arc = document.getElementById('gauge-arc');
-    arc.setAttribute('stroke-dasharray', (oee * ARC).toFixed(1) + ' 252');
-    var gaugeColor = oee >= 0.85 ? '#22c55e' : oee >= 0.75 ? accent : oee >= 0.60 ? '#d4a017' : '#ef4444';
-    arc.style.stroke = gaugeColor;
-    var gVal = document.getElementById('gauge-val');
-    gVal.textContent = f1(oee * 100);
-    gVal.style.fill  = gaugeColor;
-
-    // Badge
-    var badge = document.getElementById('oee-badge');
-    var desc  = document.getElementById('oee-benchmark-desc');
-    badge.className = 'oee-badge';
-    var gap = ((0.85 - oee) * 100).toFixed(1);
-    if (oee >= 0.85) {
-      badge.classList.add('oee-badge--worldclass'); badge.textContent = 'World Class';
-      desc.textContent = 'OEE Anda sudah di level world-class (≥85%). Fokus pada stabilisasi dan replikasi praktik terbaik ke lini produksi lainnya.';
-    } else if (oee >= 0.75) {
-      badge.classList.add('oee-badge--excellent'); badge.textContent = 'Excellent';
-      desc.textContent = 'Di atas rata-rata industri. Gap ' + gap + ' poin dari world-class — ada ruang optimasi yang bisa memberikan impact signifikan.';
-    } else if (oee >= 0.60) {
-      badge.classList.add('oee-badge--average'); badge.textContent = 'Rata-rata';
-      desc.textContent = 'Tipikal untuk manufaktur konvensional. Gap ' + gap + ' poin dari world-class — berpotensi menghasilkan penghematan besar jika dioptimasi.';
-    } else {
-      badge.classList.add('oee-badge--below'); badge.textContent = 'Di bawah Rata-rata';
-      desc.textContent = 'Ada masalah sistemik yang perlu diidentifikasi terlebih dahulu. Gap ' + gap + ' poin dari world-class. Prioritaskan root cause analysis sebelum investasi teknologi baru.';
-    }
-
-    // Revenue
-    if (price > 0) {
-      var maxOut    = planned * idealSpd;
-      var lostUnits = Math.max(0, maxOut - goodOut);
-      var lostShift = lostUnits * price;
-      var lostYear  = lostShift * shifts * 250;
-      document.getElementById('res-lost-units').textContent = fmtUnits(lostUnits) + '/shift';
-      document.getElementById('res-lost-shift').textContent = fmtRp(lostShift) + '/shift';
-      document.getElementById('res-lost-year').textContent  = fmtRp(lostYear) + '/tahun';
-      document.getElementById('oee-revenue-block').style.display = 'block';
-    } else {
-      document.getElementById('oee-revenue-block').style.display = 'none';
-    }
+  var badge = document.getElementById('oee-badge');
+  var desc  = document.getElementById('oee-benchmark-desc');
+  badge.className = 'oee-badge';
+  var gap = ((0.85 - oee) * 100).toFixed(1);
+  if (oee >= 0.85) {
+    badge.classList.add('oee-badge--worldclass');
+    badge.textContent = 'World Class';
+    desc.textContent  = 'OEE Anda sudah di level world-class (≥85%). Fokus pada stabilisasi dan replikasi praktik terbaik ke lini produksi lainnya.';
+  } else if (oee >= 0.75) {
+    badge.classList.add('oee-badge--excellent');
+    badge.textContent = 'Excellent';
+    desc.textContent  = 'Di atas rata-rata industri. Gap ' + gap + ' poin dari world-class — ada ruang optimasi yang bisa memberikan impact signifikan.';
+  } else if (oee >= 0.60) {
+    badge.classList.add('oee-badge--average');
+    badge.textContent = 'Rata-rata';
+    desc.textContent  = 'Tipikal untuk manufaktur konvensional. Gap ' + gap + ' poin dari world-class — berpotensi menghasilkan penghematan besar jika dioptimasi.';
+  } else {
+    badge.classList.add('oee-badge--below');
+    badge.textContent = 'Di bawah Rata-rata';
+    desc.textContent  = 'Ada masalah sistemik yang perlu diidentifikasi terlebih dahulu. Gap ' + gap + ' poin dari world-class. Prioritaskan root cause analysis sebelum investasi teknologi baru.';
   }
 
-  // ── Wire up all pairs ──────────────────────────────
-  bindPair('oee-planned',      'oee-planned-r');
-  bindPair('oee-downtime',     'oee-downtime-r');
-  bindPair('oee-ideal-speed',  'oee-ideal-speed-r');
-  bindPair('oee-total-output', 'oee-total-output-r');
-  bindPair('oee-rejects',      'oee-rejects-r');
-  bindPair('oee-price',        'oee-price-r');
-  bindPair('oee-shifts',       'oee-shifts-r');
+  if (price > 0) {
+    var maxOut    = planned * idealSpd;
+    var lostUnits = Math.max(0, maxOut - goodOut);
+    var lostShift = lostUnits * price;
+    var lostYear  = lostShift * shifts * 250;
+    document.getElementById('res-lost-units').textContent = fmtU(lostUnits) + '/shift';
+    document.getElementById('res-lost-shift').textContent = fmtRp(lostShift) + '/shift';
+    document.getElementById('res-lost-year').textContent  = fmtRp(lostYear) + '/tahun';
+    document.getElementById('oee-revenue-block').style.display = 'block';
+  } else {
+    document.getElementById('oee-revenue-block').style.display = 'none';
+  }
+}
 
-  // Refresh slider fills + recalc when theme toggles
-  var observer = new MutationObserver(function(muts) {
-    muts.forEach(function(m) { if (m.attributeName === 'data-theme') { refreshAllSliders(); calc(); } });
-  });
-  observer.observe(document.documentElement, { attributes: true });
-
-  calc();
-})();
+['r-planned','r-downtime','r-ideal','r-output','r-rejects','r-price','r-shifts'].forEach(function(id) { oeeSlider(id); });
+oeeCalc();
           </script>
           <!-- ── END CALCULATOR ── -->
 
