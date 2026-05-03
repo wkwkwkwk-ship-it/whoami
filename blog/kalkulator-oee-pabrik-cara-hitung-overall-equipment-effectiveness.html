@@ -656,29 +656,6 @@ input[type=range].oee-range::-moz-range-track { height: 4px; border-radius: 2px;
 
     if (planned <= 0 || idealSpd <= 0) return;
 
-    // Clamp downtime slider max to planned value
-    var dtRange = document.getElementById('oee-downtime-r');
-    if (dtRange && parseFloat(dtRange.max) !== planned) {
-      dtRange.max = planned;
-      if (parseFloat(dtRange.value) > planned) {
-        dtRange.value = planned;
-        document.getElementById('oee-downtime').value = planned;
-        downtime = planned;
-      }
-      updateSliderBg(dtRange);
-    }
-
-    // Clamp total output slider max to theoretical max
-    var theoMax = Math.max(1, (planned - Math.max(0, downtime)) * idealSpd);
-    var outRange = document.getElementById('oee-total-output-r');
-    if (outRange) {
-      var newMax = Math.ceil(theoMax / 5) * 5 + 100; // round up + buffer
-      outRange.max = newMax;
-      document.getElementById('oee-total-output').max = newMax;
-      if (parseFloat(outRange.value) > newMax) { outRange.value = newMax; document.getElementById('oee-total-output').value = newMax; }
-      updateSliderBg(outRange);
-    }
-
     var runTime = Math.max(0, planned - downtime);
     var avail   = runTime / planned;
     var perfMax = runTime * idealSpd;
