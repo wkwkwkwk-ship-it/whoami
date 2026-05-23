@@ -20,19 +20,8 @@ module.exports = async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { slug } = req.query;
-  if (!slug || typeof slug !== 'string' || slug.length > 120 || !/^[\w-]+$/.test(slug)) {
-    return res.status(400).json({ error: 'Invalid slug' });
-  }
-
   const base = process.env.KV_REST_API_URL;
   const token = process.env.KV_REST_API_TOKEN;
-
-  // Graceful fallback — returns 0 if KV store not yet configured
-  if (!base || !token) {
-    return res.status(200).json({ count: 0 });
-  }
-
   const authHeader = { Authorization: `Bearer ${token}` };
 
   // Batch GET: ?slugs=slug1,slug2,...
@@ -40,6 +29,11 @@ module.exports = async function handler(req, res) {
     const slugList = String(req.query.slugs).split(',').slice(0, 60)
       .filter(s => /^[\w-]{1,120}$/.test(s));
     if (!slugList.length) return res.status(400).json({ error: 'Invalid slugs' });
+    if (!base || !token) {
+      const result = {};
+      slugList.forEach(s => { result[s] = 0; });
+      return res.status(200).json(result);
+    }
     try {
       const keys = slugList.map(s => encodeURIComponent(`views:${s}`));
       const r = await fetch(`${base}/mget/${keys.join('/')}`, { headers: authHeader });
@@ -53,6 +47,14 @@ module.exports = async function handler(req, res) {
       return res.status(200).json(result);
     }
   }
+
+  // Single slug
+  const { slug } = req.query;
+  if (!slug || typeof slug !== 'string' || slug.length > 120 || !/^[\w-]+$/.test(slug)) {
+    return res.status(400).json({ error: 'Invalid slug' });
+  }
+
+  if (!base || !token) return res.status(200).json({ count: 0 });
 
   const key = encodeURIComponent(`views:${slug}`);
 
