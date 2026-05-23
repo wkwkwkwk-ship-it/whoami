@@ -70,7 +70,7 @@
         "url": "https://ritvaldi.my.id"
       },
       "datePublished": "2026-05-03T00:00:00+07:00",
-      "dateModified": "2026-05-03T00:00:00+07:00",
+      "dateModified": "2026-05-23T00:00:00+07:00",
       "url": "https://ritvaldi.my.id/blog/kalkulator-oee-pabrik-cara-hitung-overall-equipment-effectiveness",
       "mainEntityOfPage": {
         "@type": "WebPage",
@@ -93,6 +93,51 @@
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ritvaldi.my.id/" },
         { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ritvaldi.my.id/blog" },
         { "@type": "ListItem", "position": 3, "name": "Hitung OEE Pabrikmu dalam 60 Detik", "item": "https://ritvaldi.my.id/blog/kalkulator-oee-pabrik-cara-hitung-overall-equipment-effectiveness" }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Cara Menghitung OEE (Overall Equipment Effectiveness) Pabrik",
+      "description": "Panduan langkah demi langkah untuk menghitung OEE pabrik secara akurat menggunakan tiga komponen: Availability, Performance, dan Quality.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Hitung Availability",
+          "text": "Ukur berapa persen waktu mesin benar-benar berjalan dari total waktu yang direncanakan. Formula: Availability = (Waktu Operasi Aktual / Waktu Operasi Terencana) × 100%. Waktu operasi terencana dikurangi waktu downtime yang tidak terencana menghasilkan waktu operasi aktual."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Hitung Performance",
+          "text": "Bandingkan kecepatan aktual mesin vs kecepatan idealnya. Formula: Performance = (Output Aktual / Output Ideal pada kecepatan penuh) × 100%. Faktor yang menurunkan Performance termasuk micro-stop, speed loss, dan idle time."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Hitung Quality dan Kalkulasi OEE Final",
+          "text": "Hitung rasio produk baik vs total produk yang dihasilkan. Quality = (Produk Baik / Total Produk Dihasilkan) × 100%. OEE final = Availability × Performance × Quality. Benchmark industri: OEE 85% adalah 'world class' untuk pabrik manufaktur. Kebanyakan pabrik Indonesia berada di kisaran 40-60%."
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Apa itu OEE dan mengapa penting untuk pabrik?",
+          "acceptedAnswer": { "@type": "Answer", "text": "OEE (Overall Equipment Effectiveness) adalah KPI standar industri yang mengukur seberapa efektif mesin produksi digunakan. OEE menggabungkan tiga dimensi: Availability (mesin tidak breakdown), Performance (mesin berjalan di kecepatan optimal), dan Quality (output yang dihasilkan bebas cacat). OEE 85% dianggap world class; kebanyakan pabrik berada di kisaran 40-60% dan sering tidak menyadarinya." }
+        },
+        {
+          "@type": "Question",
+          "name": "Berapa OEE yang baik untuk pabrik manufaktur Indonesia?",
+          "acceptedAnswer": { "@type": "Answer", "text": "OEE 85% adalah benchmark 'world class' yang sering dijadikan acuan. Namun untuk pabrik yang baru memulai pengukuran, target yang lebih realistis adalah 65-75% sebagai starting point. Yang lebih penting dari angka absolutnya adalah tren — OEE yang konsisten naik 2-3% per kuartal lebih bermakna dari OEE tinggi yang stagnan." }
+        },
+        {
+          "@type": "Question",
+          "name": "Apa yang harus dilakukan jika OEE pabrik di bawah 50%?",
+          "acceptedAnswer": { "@type": "Answer", "text": "OEE di bawah 50% biasanya mengindikasikan masalah sistemik pada Availability (banyak breakdown tak terduga) atau Performance (mesin sering berjalan lambat tanpa alasan jelas). Langkah pertama: breakdown OEE ke tiga komponen untuk identifikasi mana yang paling bermasalah. Fokus dulu pada komponen dengan gap terbesar — biasanya Availability — sebelum beralih ke Performance dan Quality." }
+        }
       ]
     }
     ]
