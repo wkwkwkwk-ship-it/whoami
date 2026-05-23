@@ -33,20 +33,37 @@ module.exports = async function handler(req, res) {
     return res.status(200).json({ count: 0 });
   }
 
+  const authHeader = { Authorization: `Bearer ${token}` };
+
+  // Batch GET: ?slugs=slug1,slug2,...
+  if (req.method === 'GET' && req.query.slugs) {
+    const slugList = String(req.query.slugs).split(',').slice(0, 60)
+      .filter(s => /^[\w-]{1,120}$/.test(s));
+    if (!slugList.length) return res.status(400).json({ error: 'Invalid slugs' });
+    try {
+      const keys = slugList.map(s => encodeURIComponent(`views:${s}`));
+      const r = await fetch(`${base}/mget/${keys.join('/')}`, { headers: authHeader });
+      const data = await r.json();
+      const result = {};
+      slugList.forEach((s, i) => { result[s] = parseInt(data.result[i]) || 0; });
+      return res.status(200).json(result);
+    } catch {
+      const result = {};
+      slugList.forEach(s => { result[s] = 0; });
+      return res.status(200).json(result);
+    }
+  }
+
   const key = encodeURIComponent(`views:${slug}`);
 
   try {
     if (req.method === 'POST') {
-      const r = await fetch(`${base}/incr/${key}`, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      const r = await fetch(`${base}/incr/${key}`, { headers: authHeader });
       const data = await r.json();
       return res.status(200).json({ count: data.result || 0 });
     }
 
-    const r = await fetch(`${base}/get/${key}`, {
-      headers: { Authorization: `Bearer ${token}` },
-    });
+    const r = await fetch(`${base}/get/${key}`, { headers: authHeader });
     const data = await r.json();
     return res.status(200).json({ count: data.result || 0 });
   } catch {
