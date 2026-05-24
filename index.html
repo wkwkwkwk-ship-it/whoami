@@ -6,7 +6,7 @@
   <!-- Google Analytics -->
   <script src="/analytics.js" defer></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Muhamad Randi Ritvaldi — Founder & CEO of Synapsis.Id, Indonesia's leading IoT solutions provider. Engineer, AI enthusiast, Microsoft Imagine Cup World Finalist, and international writer based in Jakarta." />
+  <meta name="description" content="Muhamad Randi Ritvaldi — Founder & CEO, Synapsis.Id. Building Indonesia's leading IoT & AI solutions. Engineer, Imagine Cup World Finalist. Jakarta." />
   <meta name="theme-color" content="#0c0c0d" media="(prefers-color-scheme: dark)" />
   <meta name="theme-color" content="#f5f4f1" media="(prefers-color-scheme: light)" />
   <link rel="canonical" href="https://ritvaldi.my.id/" />
@@ -47,29 +47,40 @@
     "@graph": [
     {
     "@type": "WebSite",
+    "@id": "https://ritvaldi.my.id/#website",
     "name": "Muhamad Randi Ritvaldi",
     "url": "https://ritvaldi.my.id",
     "description": "Personal website of Muhamad Randi Ritvaldi — Founder & CEO of Synapsis.Id, Indonesia's leading IoT solutions provider.",
-    "inLanguage": ["id", "en"]
+    "inLanguage": ["id", "en"],
+    "mainEntity": { "@id": "https://ritvaldi.my.id/#person" }
     },
     {
     "@type": "Person",
+    "@id": "https://ritvaldi.my.id/#person",
     "name": "Muhamad Randi Ritvaldi",
     "givenName": "Muhamad Randi",
     "familyName": "Ritvaldi",
     "url": "https://ritvaldi.my.id",
-    "image": "https://ritvaldi.my.id/images/og-image.jpg",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://ritvaldi.my.id/images/og-image.jpg",
+      "width": 1200,
+      "height": 630
+    },
     "jobTitle": "Founder & CEO",
     "worksFor": {
       "@type": "Organization",
+      "@id": "https://synapsis.id/#organization",
       "name": "PT Synapsis Sinergi Digital",
-      "url": "https://synapsis.id"
+      "url": "https://synapsis.id",
+      "foundingDate": "2019"
     },
     "alumniOf": [
       { "@type": "CollegeOrUniversity", "name": "University of Manchester" },
       { "@type": "CollegeOrUniversity", "name": "Universitas Gadjah Mada" }
     ],
     "knowsAbout": ["Internet of Things", "Artificial Intelligence", "Entrepreneurship", "Embedded Systems", "Leadership"],
+    "nationality": { "@type": "Country", "name": "Indonesia" },
     "address": { "@type": "PostalAddress", "addressLocality": "Jakarta", "addressCountry": "ID" },
     "sameAs": [
       "https://www.linkedin.com/in/randi-ritvaldi/",
@@ -1314,14 +1325,14 @@ button:focus-visible, a:focus-visible { border-radius: var(--radius); }
               <span class="link-label" data-i18n="contact.email">Email</span>
               <span class="link-val">ritvaldi@synapsis.id</span>
             </a>
-            <a href="https://www.linkedin.com/in/randi-ritvaldi/" target="_blank" rel="noopener noreferrer" class="contact-link">
+            <a href="https://www.linkedin.com/in/randi-ritvaldi/" target="_blank" rel="me noopener noreferrer" class="contact-link">
               <span class="link-label">LinkedIn</span>
               <span class="link-val">linkedin.com/in/randi-ritvaldi</span>
             </a>
             <div class="contact-link contact-ig-row">
               <span class="link-label">Instagram</span>
               <span class="link-val contact-ig-wrap">
-                <a href="https://www.instagram.com/ritvaldi/" target="_blank" rel="noopener noreferrer" class="contact-ig-handle">@ritvaldi</a>
+                <a href="https://www.instagram.com/ritvaldi/" target="_blank" rel="me noopener noreferrer" class="contact-ig-handle">@ritvaldi</a>
                 <span class="contact-ig-sep">&amp;</span>
                 <a href="https://www.instagram.com/golfforwork/" target="_blank" rel="noopener noreferrer" class="contact-ig-handle">@golfforwork</a>
               </span>
