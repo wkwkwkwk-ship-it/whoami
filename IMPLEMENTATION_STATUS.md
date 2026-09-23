@@ -98,7 +98,7 @@ Person schema ada, sameAs sudah lengkap untuk platform utama. Tidak ada duplikas
 ---
 
 ## Known issues
-- **P0.4 belum dimulai** — Belum ada "Sources & Further Reading" section di artikel manapun
+- ~~P0.4~~ **SELESAI** — Sources section sudah ada di 5 artikel: agentic-ai, panduan-iot, penghematan-miliaran, biaya-downtime, checklist-iot
 - **P1.1 belum dimulai** — Belum ada "Start Here" / Selected Writing layer
 - **P1.2 belum dimulai** — Article template belum diupgrade (dek, updated date visible, CTA)
 - **Newsletter** — Formspree ID masih placeholder `YOUR_NEWSLETTER_FORM_ID` di main.js ~590
@@ -145,7 +145,7 @@ Core perubahan yang diinginkan:
 
 ## Next exact task
 
-1. **P0.4** — Terapkan pola Sources section ke artikel data-heavy: `panduan-iot-manufaktur-indonesia-implementasi-roi`, `potensi-penghematan-miliaran-iot-ai-manufaktur-indonesia`, `biaya-downtime-pabrik-dan-cara-menghitungnya`, `checklist-sebelum-implementasi-iot-industri-panduan-praktis`. Gunakan pola `<ol>` yang sama dengan yang sudah dipakai di artikel agentic-ai.
+1. ~~P0.4 SELESAI~~
 2. **Publication 2 — 19 Oktober 2026**: Physical AI — persiapkan artikel baru (slug baru, bukan update)
 3. **P1.1** — Tambah "Start Here / Selected Writing" section di homepage setelah P0 selesai semua.
 
