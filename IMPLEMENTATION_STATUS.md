@@ -1,12 +1,12 @@
 # Implementation Status
 
 ## Last updated
-2026-09-23 — Session: P0 recon + Publication 1 update
+2026-09-23 — Session: P0 selesai + P1 selesai semua
 
 ---
 
 ## Current objective
-P0 selesai. Publication 1 selesai. Berikutnya: P0.4 Sources component ke artikel lain + P1.1 Start Here.
+P0 + P1 selesai. Berikutnya: Publication 2 (19 Okt 2026) + Newsletter activation.
 
 ---
 
@@ -59,6 +59,25 @@ Person schema ada, sameAs sudah lengkap untuk platform utama. Tidak ada duplikas
 
 ---
 
+### P1.1 — Artikel Pilar / Start Here: SELESAI (2026-09-23)
+- blog.html: Expanded dari 3 → 6 artikel pilar
+- Ditambahkan: conviction, nasi-goreng (product thinking), golf (human layer)
+- Diupdate: agentic-ai pilar entry → judul baru + "Diperbarui Sep 2026" + 10 menit baca
+
+### P1.2 — Article template upgrade: SELESAI (2026-09-23)
+- Restrained CTA Synapsis.Id ditambahkan ke 3 artikel flagship:
+  - agentic-ai (antara Sources dan Social Share)
+  - panduan-iot (antara Sources dan Social Share)
+  - checklist-iot (antara Sources dan Social Share)
+- Updated date sudah ada di agentic-ai byline (dari session sebelumnya)
+
+### P1.3 — As Featured In upgrade: SELESAI (2026-09-23)
+- index.html: 5 dari 6 fi-card diupdate dengan year badge (· 2018 / · 2017 / · 2015)
+- Title cards dipertegas konteksnya
+- DTETI FT UGM: tidak ada year (tahun tidak terverifikasi)
+
+---
+
 ## In progress
 - Tidak ada yang sedang dikerjakan
 
@@ -99,8 +118,9 @@ Person schema ada, sameAs sudah lengkap untuk platform utama. Tidak ada duplikas
 
 ## Known issues
 - ~~P0.4~~ **SELESAI** — Sources section sudah ada di 5 artikel: agentic-ai, panduan-iot, penghematan-miliaran, biaya-downtime, checklist-iot
-- **P1.1 belum dimulai** — Belum ada "Start Here" / Selected Writing layer
-- **P1.2 belum dimulai** — Article template belum diupgrade (dek, updated date visible, CTA)
+- ~~P1.1~~ **SELESAI** — Artikel Pilar expanded ke 6 artikel di blog.html
+- ~~P1.2~~ **SELESAI** — CTA + updated date di key articles
+- ~~P1.3~~ **SELESAI** — As Featured In dengan year + konteks
 - **Newsletter** — Formspree ID masih placeholder `YOUR_NEWSLETTER_FORM_ID` di main.js ~590
 
 ---
@@ -145,9 +165,10 @@ Core perubahan yang diinginkan:
 
 ## Next exact task
 
-1. ~~P0.4 SELESAI~~
-2. **Publication 2 — 19 Oktober 2026**: Physical AI — persiapkan artikel baru (slug baru, bukan update)
-3. **P1.1** — Tambah "Start Here / Selected Writing" section di homepage setelah P0 selesai semua.
+1. ~~P0 selesai~~
+2. ~~P1 selesai~~
+3. **Publication 2 — 19 Oktober 2026**: Physical AI: Ketika AI Tidak Lagi Hanya Membaca Data — artikel baru, slug baru
+4. **Newsletter activation**: buat form di formspree.io, ganti `YOUR_NEWSLETTER_FORM_ID` di main.js ~590
 
 ---
 
