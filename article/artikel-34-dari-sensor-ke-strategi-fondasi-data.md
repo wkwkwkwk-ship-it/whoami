@@ -35,6 +35,7 @@ amber data streams, teal processing nodes,
 warm light at the top. Professional editorial style.
 8k, 1200x630 pixels, landscape format.
 ```
+sudah ada coba cek lagi nama filenya
 
 ---
 
