@@ -1,12 +1,12 @@
 # Implementation Status
 
 ## Last updated
-2026-09-23 — Session: P0 reconnaissance + initial status
+2026-09-23 — Session: P0 recon + Publication 1 update
 
 ---
 
 ## Current objective
-P0 complete. Masuk P0.4 (Sources component) + persiapan Publication 1 (28 Sep 2026).
+P0 selesai. Publication 1 selesai. Berikutnya: P0.4 Sources component ke artikel lain + P1.1 Start Here.
 
 ---
 
@@ -61,6 +61,15 @@ Person schema ada, sameAs sudah lengkap untuk platform utama. Tidak ada duplikas
 
 ## In progress
 - Tidak ada yang sedang dikerjakan
+
+## Publication 1 — SELESAI (2026-09-23)
+- File: `blog/agentic-ai-ketika-ai-mulai-bekerja-sendiri-tanpa-disuruh.html`
+- Judul baru: "Agentic AI di 2026: Dari Eksperimen ke ROI yang Terukur"
+- URL dipertahankan (preserve SEO equity)
+- Ditambahkan: 3 seksi baru (ROI by category, biaya operasional, governance)
+- Ditambahkan: observasi lapangan Synapsis tentang IoT data foundation
+- Ditambahkan: Sources section (Gartner, McKinsey, MIT Sloan, NVIDIA, Forrester)
+- dateModified diperbarui ke 2026-09-23
 
 ---
 
@@ -136,9 +145,9 @@ Core perubahan yang diinginkan:
 
 ## Next exact task
 
-1. **[URGENT — 28 Sep]** Update artikel agentic-ai dengan framing 2026: ROI, governance, industrial relevance. Perbarui dateModified. Tambah Sources section sebagai P0.4 sekalian.
-2. **P0.4** — Setelah artikel agentic-ai diupdate, buat pola Sources & Further Reading yang reusable dan terapkan ke artikel data-heavy lainnya (panduan-iot, potensi-penghematan, biaya-downtime, checklist-iot).
-3. **P1.1** — Tambah "Start Here / Selected Writing" section di homepage atau halaman terpisah setelah P0 selesai semua.
+1. **P0.4** — Terapkan pola Sources section ke artikel data-heavy: `panduan-iot-manufaktur-indonesia-implementasi-roi`, `potensi-penghematan-miliaran-iot-ai-manufaktur-indonesia`, `biaya-downtime-pabrik-dan-cara-menghitungnya`, `checklist-sebelum-implementasi-iot-industri-panduan-praktis`. Gunakan pola `<ol>` yang sama dengan yang sudah dipakai di artikel agentic-ai.
+2. **Publication 2 — 19 Oktober 2026**: Physical AI — persiapkan artikel baru (slug baru, bukan update)
+3. **P1.1** — Tambah "Start Here / Selected Writing" section di homepage setelah P0 selesai semua.
 
 ---
 
