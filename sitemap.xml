@@ -116,7 +116,7 @@
   </url>
   <url>
     <loc>https://ritvaldi.my.id/blog/agentic-ai-ketika-ai-mulai-bekerja-sendiri-tanpa-disuruh</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-09-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -263,5 +263,11 @@
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ritvaldi.my.id/blog/physical-ai-ketika-ai-bertindak-di-dunia-fisik-industri</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
